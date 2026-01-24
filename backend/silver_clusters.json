@@ -1,0 +1,179 @@
+[
+    {
+        "cluster_id": -1,
+        "size": 21,
+        "label": "Noise/Outliers",
+        "representative_titles": [
+            "Bitcoin\u2019s weakness versus gold and equities puts quantum computing fears back in focus",
+            "Vegas Casino To Accept Canadian Dollars At Par In Bid To Lure Northerners Back To Sin City",
+            "With Control Of Virginia, Democrats Go Into A Tax And Regulatory Frenzy",
+            "Silver breaks past $100 for first time, a new record high",
+            "Strength Seen in Avino Silver (ASM): Can Its 13.5% Jump Turn into More Strength?"
+        ]
+    },
+    {
+        "cluster_id": 0,
+        "size": 4,
+        "label": "Narrative 0",
+        "representative_titles": [
+            "AI-Induced Cultural Stagnation Is No Longer Speculation \u2212 It's Already Happening",
+            "New Gig Economy Job: Train AI That Replaces You",
+            "The Case Against Declaring Artificial General Intelligence",
+            "Here Come Humanoid Robots: Industry Makes Clear Pivot Toward \"Dedicated-Purpose\" Commercial Deployments"
+        ]
+    },
+    {
+        "cluster_id": 1,
+        "size": 21,
+        "label": "Narrative 1",
+        "representative_titles": [
+            "China Has Officially Overtaken Tesla In The Global EV Race",
+            "Did First Solar's (FSLR) Legal Win on TOPCon Patents Just Reshape Its Competitive Moat?",
+            "First Solar (FSLR) Stock Sinks As Market Gains: Here's Why",
+            "Solar ETF Jumps In Buy Zone On Rush To Lock In Energy Projects, Tax Credits",
+            "First Solar (FSLR) Valuation After Patent Office Backs TOPCon Solar Cell Protections"
+        ]
+    },
+    {
+        "cluster_id": 2,
+        "size": 6,
+        "label": "Narrative 2",
+        "representative_titles": [
+            "Here\u2019s What Raymond James Think About Coeur Mining (CDE)",
+            "Coeur Mining (CDE) Soars 12.5%: Is Further Upside Left in the Stock?",
+            "Strong Production Lifts CDE's Top Line: Will the Momentum Sustain?",
+            "Coeur Mining, Inc. (CDE): A Bull Case Theory",
+            "CDE Rallies 236% in the Past Year: What Should Investors Do Now?"
+        ]
+    },
+    {
+        "cluster_id": 3,
+        "size": 5,
+        "label": "Narrative 3",
+        "representative_titles": [
+            "Are Basic Materials Stocks Lagging Hecla Mining (HL) This Year?",
+            "Hecla Mining (HL) Valuation Check After Strong Recent Share Price Momentum",
+            "Hecla Mining vs. First Majestic: Which Silver Mining Stock has Greater Upside?",
+            "Is It Too Late To Consider Hecla Mining (HL) After A 3x One-Year Surge?",
+            "Does Hecla Mining\u2019s (HL) Leadership Shift Reframe Its Strategy Amid Record Silver Prices?"
+        ]
+    },
+    {
+        "cluster_id": 4,
+        "size": 16,
+        "label": "Narrative 4",
+        "representative_titles": [
+            "Suicidal Empathy Is Another Front In The CCP's Hybrid War",
+            "Obama's Fingerprints All Over Investigations Of Trump And Clinton",
+            "'Saving The Family' Should Start With Sound Money",
+            "The EU-US $800BN Postwar Ukraine 'Prosperity' Plan Which Should Outrage MAGA",
+            "In Humiliating Retreat, Starmer Forced To Pull Chagos Bill After Trump Backlash"
+        ]
+    },
+    {
+        "cluster_id": 5,
+        "size": 6,
+        "label": "Narrative 5",
+        "representative_titles": [
+            "Review & Preview: Shiny Days",
+            "Stock market today: Dow, S&P 500 cap volatile week with back-to-back weekly losses",
+            "The Next 10 Days Of Winter: The Worst In 40 Years Across The US",
+            "Friday's big stock stories: What\u2019s likely to move the market in the next trading session",
+            "The 'trap doors' to watch in the S&P 500 and Nasdaq as trade pressure mounts, according to the charts"
+        ]
+    },
+    {
+        "cluster_id": 6,
+        "size": 13,
+        "label": "Narrative 6",
+        "representative_titles": [
+            "PAAS vs. SSRM: Which Mining Stock Is the Better Buy Now?",
+            "Pan American Silver price target lowered to $54 from $58 at Jefferies",
+            "Jim Cramer Considers Pan American Silver the \u201cBest Silver Mining Company\u201d",
+            "Pan American Silver Reports Y/Y Increase in '25 Silver Production",
+            "MOS Updates on Market and Issues Preliminary Q4 Sales Volumes"
+        ]
+    },
+    {
+        "cluster_id": 7,
+        "size": 5,
+        "label": "Narrative 7",
+        "representative_titles": [
+            "Silver Outpaces Gold as Rally Looks 'Stretched' but Demand Holds, ProShares Says",
+            "Silver Has Gone Ballistic. How to Play the Metal\u2019s Next Move.",
+            "10-Year, Silver, Crude Hit Inflection Points. What The Charts Say About 3 Macro Indicators.",
+            "Silver Rally Isn't Over Yet: 3 Stocks Investors Should Buy",
+            "Here\u2019s everything investors need to know about the historic silver rally in 10 charts"
+        ]
+    },
+    {
+        "cluster_id": 8,
+        "size": 19,
+        "label": "Narrative 8",
+        "representative_titles": [
+            "Meet The Man Who Bought $1 Billion In Physical Silver Before The Rally",
+            "Gold Races Toward $5,000 as Silver Hits a Record $100",
+            "ETFs to Watch as Silver's Upward Momentum Continues",
+            "Flocking to precious metal ETFs? Keep an eye out for these tax surprises",
+            "Where this top Fidelity bond manager is investing for 2026"
+        ]
+    },
+    {
+        "cluster_id": 9,
+        "size": 18,
+        "label": "Narrative 9",
+        "representative_titles": [
+            "Gold Resource (GORO) Is Up 34.2% After Silver-Led Turnaround And Oaxaca Blockade - Has The Bull Case Changed?",
+            "B2Gold (BTG) Rises Higher Than Market: Key Facts",
+            "Assessing Wheaton Precious Metals (TSX:WPM) Valuation After New Gold Stream Deal And Sustainability Recognition",
+            "JPMorgan sees big gains for two stocks in a unique industry: water dredging",
+            "Here's How Much a $1000 Investment in Wheaton Precious Metals Corp. Made 10 Years Ago Would Be Worth Today"
+        ]
+    },
+    {
+        "cluster_id": 10,
+        "size": 5,
+        "label": "Narrative 10",
+        "representative_titles": [
+            "5 Undervalued Safe-Haven Stocks with Strong Dividends",
+            "3 TSX Companies Estimated To Be Priced Below Their Intrinsic Values",
+            "TSX Stocks Estimated Below Fair Value In January 2026",
+            "TSX Stocks Possibly Trading Below Estimated Value In January 2026",
+            "TSX Insights First Majestic Silver And 2 Other Stocks That May Be Below Intrinsic Value Estimates"
+        ]
+    },
+    {
+        "cluster_id": 11,
+        "size": 5,
+        "label": "Narrative 11",
+        "representative_titles": [
+            "Industry Analysts Just Made A Captivating Upgrade To Their First Majestic Silver Corp. (TSE:AG) Revenue Forecasts",
+            "Raymond James upgrades this \u2018Magnificent Seven\u2019 titan as AI-driven growth accelerates",
+            "Is First Majestic Silver's Higher Production a Catalyst for Future Growth?",
+            "First Majestic's Q4 Silver-Equivalent Production Jumps 37% Y/Y",
+            "First Majestic Trading at a Premium Value: Here's How to Play the Stock"
+        ]
+    },
+    {
+        "cluster_id": 12,
+        "size": 3,
+        "label": "Narrative 12",
+        "representative_titles": [
+            "Pacifica Silver Closes Upsized Brokered Offering; Shares up 2.1%",
+            "This Silver Stock Is Up 281% and One Fund Just Took $5 Million Off the Table",
+            "Assessing Endeavour Silver (TSX:EDR) Valuation After Strong One Year Return Despite Ongoing Net Loss"
+        ]
+    },
+    {
+        "cluster_id": 13,
+        "size": 8,
+        "label": "Narrative 13",
+        "representative_titles": [
+            "Has Silvercorp Metals (TSX:SVM) Run Too Far After Its 272% One-Year Surge?",
+            "Silvercorp Metals Maintained at Outperform at BMO Following Kyrgyzstan Acquisition; Price Target Raised to C$19.50",
+            "How The New Price Target Is Shaping The Silvercorp Metals (TSX:SVM) Investment Story",
+            "Silvercorp (SVM) Surges 8.2%: Is This an Indication of Further Gains?",
+            "Silvercorp to acquire 70% stake in Kyrgyzstan gold projects"
+        ]
+    }
+]

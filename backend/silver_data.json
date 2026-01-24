@@ -1,50 +1,5 @@
 [
     {
-        "source": "MetalPriceAPI",
-        "ticker": "USDXAG",
-        "title": "Spot Price USDXAG: $0.01",
-        "summary": "Current spot price for USDXAG is $0.01 USD/oz",
-        "full_text": "Spot Price Update: USDXAG trading at $0.01",
-        "url": "https://metalpriceapi.com",
-        "published_at": "2026-01-24T05:29:59",
-        "raw_data": "{'success': True, 'base': 'USD', 'timestamp': 1769212799, 'rates': {'USDXAG': 97.4755185849, 'USDXAU': 4947.051705595, 'XAG': 0.0102589862, 'XAU': 0.0002021406}}",
-        "processed": {
-            "clean_text": "Spot Price Update: USDXAG trading at $0.01",
-            "sentiment_score": 0.0,
-            "is_relevant": true
-        }
-    },
-    {
-        "source": "MetalPriceAPI",
-        "ticker": "XAG",
-        "title": "Spot Price XAG: $97.48",
-        "summary": "Current spot price for XAG is $97.48 USD/oz",
-        "full_text": "Spot Price Update: XAG trading at $97.48",
-        "url": "https://metalpriceapi.com",
-        "published_at": "2026-01-24T05:29:59",
-        "raw_data": "{'success': True, 'base': 'USD', 'timestamp': 1769212799, 'rates': {'USDXAG': 97.4755185849, 'USDXAU': 4947.051705595, 'XAG': 0.0102589862, 'XAU': 0.0002021406}}",
-        "processed": {
-            "clean_text": "Spot Price Update: XAG trading at $97.48",
-            "sentiment_score": 0.0,
-            "is_relevant": true
-        }
-    },
-    {
-        "source": "MetalPriceAPI",
-        "ticker": "XAU",
-        "title": "Spot Price XAU: $4947.05",
-        "summary": "Current spot price for XAU is $4947.05 USD/oz",
-        "full_text": "Spot Price Update: XAU trading at $4947.05",
-        "url": "https://metalpriceapi.com",
-        "published_at": "2026-01-24T05:29:59",
-        "raw_data": "{'success': True, 'base': 'USD', 'timestamp': 1769212799, 'rates': {'USDXAG': 97.4755185849, 'USDXAU': 4947.051705595, 'XAG': 0.0102589862, 'XAU': 0.0002021406}}",
-        "processed": {
-            "clean_text": "Spot Price Update: XAU trading at $4947.05",
-            "sentiment_score": 0.0,
-            "is_relevant": true
-        }
-    },
-    {
         "source": "Yahoo Finance",
         "ticker": "SI=F",
         "title": "Bitcoin\u2019s weakness versus gold and equities puts quantum computing fears back in focus",
