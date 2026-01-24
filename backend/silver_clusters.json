@@ -2,7 +2,7 @@
     {
         "cluster_id": -1,
         "size": 21,
-        "label": "Noise/Outliers",
+        "label": "Noise coverage (Unrelated)",
         "representative_titles": [
             "Bitcoin\u2019s weakness versus gold and equities puts quantum computing fears back in focus",
             "Vegas Casino To Accept Canadian Dollars At Par In Bid To Lure Northerners Back To Sin City",
@@ -14,7 +14,7 @@
     {
         "cluster_id": 0,
         "size": 4,
-        "label": "Narrative 0",
+        "label": "Against | Against Declaring | Ai",
         "representative_titles": [
             "AI-Induced Cultural Stagnation Is No Longer Speculation \u2212 It's Already Happening",
             "New Gig Economy Job: Train AI That Replaces You",
@@ -25,7 +25,7 @@
     {
         "cluster_id": 1,
         "size": 21,
-        "label": "Narrative 1",
+        "label": "Solar | First | First Solar",
         "representative_titles": [
             "China Has Officially Overtaken Tesla In The Global EV Race",
             "Did First Solar's (FSLR) Legal Win on TOPCon Patents Just Reshape Its Competitive Moat?",
@@ -37,7 +37,7 @@
     {
         "cluster_id": 2,
         "size": 6,
-        "label": "Narrative 2",
+        "label": "Cde | Coeur | Coeur Mining",
         "representative_titles": [
             "Here\u2019s What Raymond James Think About Coeur Mining (CDE)",
             "Coeur Mining (CDE) Soars 12.5%: Is Further Upside Left in the Stock?",
@@ -49,7 +49,7 @@
     {
         "cluster_id": 3,
         "size": 5,
-        "label": "Narrative 3",
+        "label": "Hecla | Mining | Hecla Mining",
         "representative_titles": [
             "Are Basic Materials Stocks Lagging Hecla Mining (HL) This Year?",
             "Hecla Mining (HL) Valuation Check After Strong Recent Share Price Momentum",
@@ -61,7 +61,7 @@
     {
         "cluster_id": 4,
         "size": 16,
-        "label": "Narrative 4",
+        "label": "Trump | Says | Davos",
         "representative_titles": [
             "Suicidal Empathy Is Another Front In The CCP's Hybrid War",
             "Obama's Fingerprints All Over Investigations Of Trump And Clinton",
@@ -73,7 +73,7 @@
     {
         "cluster_id": 5,
         "size": 6,
-        "label": "Narrative 5",
+        "label": "As | Days | Next",
         "representative_titles": [
             "Review & Preview: Shiny Days",
             "Stock market today: Dow, S&P 500 cap volatile week with back-to-back weekly losses",
@@ -85,7 +85,7 @@
     {
         "cluster_id": 6,
         "size": 13,
-        "label": "Narrative 6",
+        "label": "American | Pan | Pan American",
         "representative_titles": [
             "PAAS vs. SSRM: Which Mining Stock Is the Better Buy Now?",
             "Pan American Silver price target lowered to $54 from $58 at Jefferies",
@@ -97,7 +97,7 @@
     {
         "cluster_id": 7,
         "size": 5,
-        "label": "Narrative 7",
+        "label": "About | Charts | About Historic",
         "representative_titles": [
             "Silver Outpaces Gold as Rally Looks 'Stretched' but Demand Holds, ProShares Says",
             "Silver Has Gone Ballistic. How to Play the Metal\u2019s Next Move.",
@@ -109,7 +109,7 @@
     {
         "cluster_id": 8,
         "size": 19,
-        "label": "Narrative 8",
+        "label": "Etf | Etfs | As",
         "representative_titles": [
             "Meet The Man Who Bought $1 Billion In Physical Silver Before The Rally",
             "Gold Races Toward $5,000 as Silver Hits a Record $100",
@@ -121,7 +121,7 @@
     {
         "cluster_id": 9,
         "size": 18,
-        "label": "Narrative 9",
+        "label": "After | Gold | Fortuna",
         "representative_titles": [
             "Gold Resource (GORO) Is Up 34.2% After Silver-Led Turnaround And Oaxaca Blockade - Has The Bull Case Changed?",
             "B2Gold (BTG) Rises Higher Than Market: Key Facts",
@@ -133,7 +133,7 @@
     {
         "cluster_id": 10,
         "size": 5,
-        "label": "Narrative 10",
+        "label": "Below | Tsx | Estimated",
         "representative_titles": [
             "5 Undervalued Safe-Haven Stocks with Strong Dividends",
             "3 TSX Companies Estimated To Be Priced Below Their Intrinsic Values",
@@ -145,7 +145,7 @@
     {
         "cluster_id": 11,
         "size": 5,
-        "label": "Narrative 11",
+        "label": "First | First Majestic | Majestic",
         "representative_titles": [
             "Industry Analysts Just Made A Captivating Upgrade To Their First Majestic Silver Corp. (TSE:AG) Revenue Forecasts",
             "Raymond James upgrades this \u2018Magnificent Seven\u2019 titan as AI-driven growth accelerates",
@@ -157,7 +157,7 @@
     {
         "cluster_id": 12,
         "size": 3,
-        "label": "Narrative 12",
+        "label": "One | Up | After",
         "representative_titles": [
             "Pacifica Silver Closes Upsized Brokered Offering; Shares up 2.1%",
             "This Silver Stock Is Up 281% and One Fund Just Took $5 Million Off the Table",
@@ -167,7 +167,7 @@
     {
         "cluster_id": 13,
         "size": 8,
-        "label": "Narrative 13",
+        "label": "Silvercorp | Metals | Silvercorp Metals",
         "representative_titles": [
             "Has Silvercorp Metals (TSX:SVM) Run Too Far After Its 272% One-Year Surge?",
             "Silvercorp Metals Maintained at Outperform at BMO Following Kyrgyzstan Acquisition; Price Target Raised to C$19.50",

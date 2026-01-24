@@ -13,10 +13,17 @@ except ImportError:
     print("[!] UMAP or HDBSCAN not installed.")
     sys.exit(1)
 
+# Add project root to path ensuring module resolution works
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
+# Import Namer
+from backend.processing.narrative_namer import NarrativeNamer
+
 class ClusterEngine:
     def __init__(self, data_file: str, vector_file: str):
         self.data_file = data_file
         self.vector_file = vector_file
+        self.namer = NarrativeNamer()
         
     def load_data(self):
         if not os.path.exists(self.vector_file):
@@ -61,15 +68,22 @@ class ClusterEngine:
         results = []
         for cluster_id in sorted(df['cluster'].unique()):
             cluster_items = df[df['cluster'] == cluster_id]
+            titles = cluster_items['title'].tolist()
             
-            # Simple summarization: Just take the first 3 titles
-            top_titles = cluster_items['title'].head(5).tolist()
+            # Use Namer to generate label
+            if cluster_id == -1:
+                label = "Noise coverage (Unrelated)"
+            else:
+                label = self.namer.generate_name(titles)
+            
+            # Simple summarization: Just take the first 5 titles
+            representative_titles = titles[:5]
             
             entry = {
                 'cluster_id': int(cluster_id),
                 'size': int(len(cluster_items)),
-                'label': "Noise/Outliers" if cluster_id == -1 else f"Narrative {cluster_id}",
-                'representative_titles': top_titles
+                'label': label,
+                'representative_titles': representative_titles
             }
             results.append(entry)
             
