@@ -47,6 +47,14 @@ const Header = () => {
            <Activity size={18} />
            <span className="hidden sm:inline">Model Accuracy</span>
         </Link>
+        
+        {/* Auth Buttons */}
+        <Link to="/login" className="p-2 rounded-lg hover:bg-[#ffffff]/10 dark:hover:bg-white/10 text-slate-500 dark:text-slate-300 transition-colors font-semibold hover:text-[#fca311] dark:hover:text-cyan-400">
+            Login
+        </Link>
+        <Link to="/signup" className="px-4 py-2 rounded-lg bg-[#fca311] hover:bg-[#fca311]/90 text-white font-bold text-sm shadow-lg shadow-orange-500/20 transition-all transform hover:scale-105">
+            Sign Up
+        </Link>
 
         {/* Theme Toggle Button Removed */}
 

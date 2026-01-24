@@ -37,3 +37,19 @@ fusion_results.txt
 # Optional: Data files (Uncomment if you don't want to commit data)
 # backend/silver_data.json
 # backend/silver_vectors.json
+
+# Node/Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
