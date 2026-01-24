@@ -8,7 +8,7 @@ const StatsRow = ({ stats }) => {
 
   return (
     <div className="grid grid-cols-3 gap-4 mb-6">
-      <div className="p-4 rounded-xl bg-[#14213d] dark:bg-white/5 border border-[#fca311]/10 dark:border-white/10 shadow-sm dark:shadow-none flex items-center gap-4">
+      <div className="p-4 rounded-xl bg-[#14213d] dark:bg-white/5 border-2 border-blue-900 dark:border-blue-900 shadow-sm dark:shadow-none flex items-center gap-4">
         <div className="p-3 rounded-lg bg-[#fca311]/20 dark:bg-blue-500/10 text-[#fca311] dark:text-blue-400">
           <Layers size={20} />
         </div>
@@ -18,7 +18,7 @@ const StatsRow = ({ stats }) => {
         </div>
       </div>
 
-      <div className="p-4 rounded-xl bg-[#14213d] dark:bg-white/5 border border-[#fca311]/10 dark:border-white/10 shadow-sm dark:shadow-none flex items-center gap-4">
+      <div className="p-4 rounded-xl bg-[#14213d] dark:bg-white/5 border-2 border-blue-900 dark:border-blue-900 shadow-sm dark:shadow-none flex items-center gap-4">
         <div className="p-3 rounded-lg bg-[#fca311]/20 dark:bg-purple-500/10 text-[#fca311] dark:text-purple-400">
           <Activity size={20} />
         </div>
@@ -28,7 +28,7 @@ const StatsRow = ({ stats }) => {
         </div>
       </div>
 
-      <div className="p-4 rounded-xl bg-[#14213d] dark:bg-white/5 border border-[#fca311]/10 dark:border-white/10 shadow-sm dark:shadow-none flex items-center gap-4">
+      <div className="p-4 rounded-xl bg-[#14213d] dark:bg-white/5 border-2 border-blue-900 dark:border-blue-900 shadow-sm dark:shadow-none flex items-center gap-4">
         <div className="p-3 rounded-lg bg-[#fca311]/20 dark:bg-orange-500/10 text-[#fca311] dark:text-orange-400">
           <Zap size={20} />
         </div>
