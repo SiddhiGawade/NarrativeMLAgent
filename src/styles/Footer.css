@@ -1,0 +1,126 @@
+/* ============================= */
+/* Footer Base */
+/* ============================= */
+
+.footer {
+  background: #000000;
+  color: #e5e5e5;
+  padding-top: 80px;
+}
+
+/* ============================= */
+/* Container */
+/* ============================= */
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+}
+
+/* ============================= */
+/* Brand */
+/* ============================= */
+
+.footer-brand h3 {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #bfbfbf;
+}
+
+/* ============================= */
+/* Links */
+/* ============================= */
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 14px;
+  margin-bottom: 14px;
+  color: #fca311;
+  letter-spacing: 1px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #e5e5e5;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fca311;
+}
+
+/* ============================= */
+/* Contact */
+/* ============================= */
+
+.footer-contact p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.footer-contact span {
+  color: #fca311;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-socials a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #e5e5e5;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #fca311;
+}
+
+/* ============================= */
+/* Bottom Bar */
+/* ============================= */
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #222;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}

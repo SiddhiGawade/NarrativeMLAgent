@@ -1,0 +1,94 @@
+/* ============================= */
+/* Header Base */
+/* ============================= */
+
+/* ============================= */
+/* Header Layout */
+/* ============================= */
+/* ============================= */
+/* Sticky Header */
+/* ============================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50; /* above content, below modals */
+
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.85)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================= */
+/* Logo */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-wrapper img {
+  height: 100px; /* visibly larger */
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #14213d;
+  letter-spacing: 0.4px;
+}
+
+/* ============================= */
+/* Navigation */
+/* ============================= */
+
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #14213d;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #fca311; /* gold accent */
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: #000000;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}

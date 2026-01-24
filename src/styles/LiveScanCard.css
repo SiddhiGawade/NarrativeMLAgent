@@ -1,0 +1,34 @@
+.source-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot.green {
+  background: #22c55e;
+}
+
+.scope {
+  margin: 12px 0;
+  text-align: left;
+}
+
+.scope label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.scope select {
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+}
