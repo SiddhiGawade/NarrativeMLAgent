@@ -1,23 +1,30 @@
 import { useEffect, useRef } from "react";
+import { Linkedin, Github } from "lucide-react";
 
 const team = [
   {
     name: "Siddhi Gawade",
     role: "AI & System Design",
     desc: "Designed narrative detection pipeline and system architecture.",
-    image: "/siddhi.jpeg"
+    image: "/siddhi.jpeg",
+    linkedin: "https://www.linkedin.com/in/siddhi-gawade/",
+    github: "https://github.com/SiddhiGawade"
   },
   {
     name: "Sejal Dhanve",
     role: "Frontend & UX",
     desc: "Built interactive UI and visual storytelling experience.",
-    image: "/sejal.jpeg"
+    image: "/sejal.jpeg",
+    linkedin: "https://www.linkedin.com/in/sejal-dhanve-b01882310/",
+    github: "https://github.com/sejaldhanve"
   },
   {
     name: "Kedar Sawant",
     role: "Data & Research",
     desc: "Market research, narrative validation, and evaluation.",
-    image: "/kedar.jpeg"
+    image: "/kedar.jpeg",
+    linkedin: "https://www.linkedin.com/in/kedar-sawant-891968340/",
+    github: "https://github.com/sawantkedar0803-cloud"
   }
 ];
 
@@ -73,7 +80,16 @@ export default function MeetTheTeam() {
 
               <h3 className="text-lg text-[#14213d] dark:text-white font-semibold mb-1.5">{member.name}</h3>
               <span className="block text-sm text-[#fca311] font-semibold mb-3.5">{member.role}</span>
-              <p className="text-sm text-[#6b7280] dark:text-gray-400 leading-relaxed">{member.desc}</p>
+              <p className="text-sm text-[#6b7280] dark:text-gray-400 leading-relaxed mb-6">{member.desc}</p>
+
+              <div className="flex justify-center gap-4">
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 rounded-full border border-[#14213d] dark:border-white text-[#14213d] dark:text-white hover:bg-[#14213d] hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">
+                      <Linkedin size={18} />
+                  </a>
+                  <a href={member.github} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 rounded-full border border-[#14213d] dark:border-white text-[#14213d] dark:text-white hover:bg-[#14213d] hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">
+                      <Github size={18} />
+                  </a>
+              </div>
             </div>
           ))}
         </div>

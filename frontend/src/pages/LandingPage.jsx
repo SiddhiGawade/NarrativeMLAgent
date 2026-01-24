@@ -49,7 +49,7 @@ export default function LandingPage() {
               onClick={onStartAnalysis}
               className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-br from-[#fca311] to-[#eb5e28] text-black rounded-full font-bold text-lg shadow-[0_0_25px_rgba(252,163,17,0.45)] hover:shadow-[0_0_40px_rgba(252,163,17,0.6)] hover:scale-105 active:scale-95 transition-all duration-300"
             >
-              Start Live Scan
+              Start Live Narrative Analysis
               <MoveRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>

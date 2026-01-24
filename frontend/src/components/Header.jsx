@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, TrendingUp, Sun, Moon, Activity } from 'lucide-react';
+import { Eye, TrendingUp, Sun, Moon, Activity, LayoutDashboard } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import snaLogo from '../assets/SNA_Logo.png';
@@ -29,7 +29,7 @@ const Header = () => {
   const goldPrice = 2650.10;
 
   return (
-    <header className="flex items-center justify-between p-6 border-b border-[#fca311]/20 dark:border-white/5 bg-white/95 dark:bg-white/[0.02] backdrop-blur-md sticky top-0 z-50 shadow-sm dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-colors duration-300">
+    <header className="flex items-center justify-between p-6 border-b border-[#fca311]/20 dark:border-white/5 bg-white/60 dark:bg-[#050510]/60 backdrop-blur-xl sticky top-0 z-50 shadow-sm dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-colors duration-300">
       <div className="flex items-center gap-3 group">
         <Link to="/">
           <img src={snaLogo} alt="SNA Logo" className="h-[50px] w-auto object-contain hover:scale-105 transition-transform duration-300" />
@@ -37,6 +37,11 @@ const Header = () => {
       </div>
 
       <div className="flex items-center gap-6 text-sm font-mono">
+        <Link to="/dashboard" className="p-2 rounded-lg hover:bg-[#ffffff]/10 dark:hover:bg-white/10 text-slate-500 dark:text-slate-300 transition-colors flex items-center gap-2 hover:text-[#fca311] dark:hover:text-cyan-400">
+           <LayoutDashboard size={18} />
+           <span className="hidden sm:inline">Dashboard</span>
+        </Link>
+
         {/* Theme Toggle */}
         <Link to="/metrics" className="p-2 rounded-lg hover:bg-[#ffffff]/10 dark:hover:bg-white/10 text-slate-500 dark:text-slate-300 transition-colors flex items-center gap-2 hover:text-[#fca311] dark:hover:text-cyan-400">
            <Activity size={18} />
