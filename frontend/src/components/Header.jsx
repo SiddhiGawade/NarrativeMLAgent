@@ -2,6 +2,7 @@ import React from 'react';
 import { Eye, TrendingUp, Sun, Moon, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
+import snaLogo from '../assets/SNA_Logo.png';
 
 const CURRENCIES = {
   USD: { code: 'USD', symbol: '$', rate: 1, name: 'United States Dollar' },
@@ -30,13 +31,9 @@ const Header = () => {
   return (
     <header className="flex items-center justify-between p-6 border-b border-[#fca311]/20 dark:border-white/5 bg-white/95 dark:bg-white/[0.02] backdrop-blur-md sticky top-0 z-50 shadow-sm dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-colors duration-300">
       <div className="flex items-center gap-3 group">
-        <div className="p-2 rounded-lg bg-[#fca311]/10 dark:bg-cyan-500/10 border border-[#fca311]/20 dark:border-cyan-500/20 text-[#fca311] dark:text-cyan-400 shadow-[0_0_15px_-5px_#fca311] dark:shadow-[0_0_15px_-5px_var(--color-neon-blue)] group-hover:shadow-[0_0_20px_-2px_#fca311] dark:group-hover:shadow-[0_0_20px_-2px_var(--color-neon-blue)] transition-all duration-300">
-          <Eye size={24} />
-        </div>
-        <div>
-          <h1 className="text-xl font-bold tracking-widest text-[#14213d] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-cyan-200 dark:to-white">ECHELON</h1>
-          <p className="text-[10px] text-[#fca311] dark:text-cyan-500/60 uppercase tracking-[0.2em] font-medium">Autonomous Pattern Hunter</p>
-        </div>
+        <Link to="/">
+          <img src={snaLogo} alt="SNA Logo" className="h-[50px] w-auto object-contain hover:scale-105 transition-transform duration-300" />
+        </Link>
       </div>
 
       <div className="flex items-center gap-6 text-sm font-mono">
@@ -46,29 +43,24 @@ const Header = () => {
            <span className="hidden sm:inline">Model Accuracy</span>
         </Link>
 
-        <button
-          onClick={toggleTheme}
-          className="p-2 rounded-lg hover:bg-[#ffffff]/10 dark:hover:bg-white/10 text-[#fca311] dark:text-slate-300 transition-colors"
-          aria-label="Toggle theme"
-        >
-          {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-        </button>
+        {/* Theme Toggle Button Removed */}
+
 
         {/* Currency Selector */}
         <div className="relative group">
             <select 
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value)}
-                className="bg-[#14213d] dark:bg-white/5 border border-[#fca311]/20 dark:border-white/10 text-[#ffffff] dark:text-slate-300 text-xs rounded px-2 py-1 outline-none focus:border-[#fca311]/50 dark:focus:border-cyan-500/50 appearance-none cursor-pointer hover:bg-[#ffffff]/10 dark:hover:bg-white/10 transition-colors pr-6"
+                className="bg-[#14213d] border border-[#fca311]/40 text-white text-xs rounded-md px-3 py-1.5 outline-none focus:border-[#fca311] appearance-none cursor-pointer hover:bg-[#1e293b] transition-colors pr-8 font-medium shadow-sm"
             >
                 {Object.keys(CURRENCIES).map((code) => (
-                    <option key={code} value={code} className="bg-[#14213d] dark:bg-slate-900 text-[#ffffff] dark:text-slate-300">
+                    <option key={code} value={code} className="bg-[#14213d] text-white">
                         {code} ({CURRENCIES[code].symbol})
                     </option>
                 ))}
             </select>
-             <div className="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2 text-slate-500">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+             <div className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-[#fca311]">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="m6 9 6 6 6-6"/>
                 </svg>
             </div>
