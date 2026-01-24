@@ -1,5 +1,6 @@
 import React from 'react';
-import { Eye, TrendingUp, Sun, Moon } from 'lucide-react';
+import { Eye, TrendingUp, Sun, Moon, Activity } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 
 const CURRENCIES = {
@@ -27,19 +28,24 @@ const Header = () => {
   const goldPrice = 2650.10;
 
   return (
-    <header className="flex items-center justify-between p-6 border-b border-[#fca311]/20 dark:border-white/5 bg-[#14213d]/95 dark:bg-white/[0.02] backdrop-blur-md sticky top-0 z-50 shadow-sm dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-colors duration-300">
+    <header className="flex items-center justify-between p-6 border-b border-[#fca311]/20 dark:border-white/5 bg-white/95 dark:bg-white/[0.02] backdrop-blur-md sticky top-0 z-50 shadow-sm dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-colors duration-300">
       <div className="flex items-center gap-3 group">
         <div className="p-2 rounded-lg bg-[#fca311]/10 dark:bg-cyan-500/10 border border-[#fca311]/20 dark:border-cyan-500/20 text-[#fca311] dark:text-cyan-400 shadow-[0_0_15px_-5px_#fca311] dark:shadow-[0_0_15px_-5px_var(--color-neon-blue)] group-hover:shadow-[0_0_20px_-2px_#fca311] dark:group-hover:shadow-[0_0_20px_-2px_var(--color-neon-blue)] transition-all duration-300">
           <Eye size={24} />
         </div>
         <div>
-          <h1 className="text-xl font-bold tracking-widest text-[#ffffff] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-cyan-200 dark:to-white">ECHELON</h1>
+          <h1 className="text-xl font-bold tracking-widest text-[#14213d] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-cyan-200 dark:to-white">ECHELON</h1>
           <p className="text-[10px] text-[#fca311] dark:text-cyan-500/60 uppercase tracking-[0.2em] font-medium">Autonomous Pattern Hunter</p>
         </div>
       </div>
 
       <div className="flex items-center gap-6 text-sm font-mono">
         {/* Theme Toggle */}
+        <Link to="/metrics" className="p-2 rounded-lg hover:bg-[#ffffff]/10 dark:hover:bg-white/10 text-slate-500 dark:text-slate-300 transition-colors flex items-center gap-2 hover:text-[#fca311] dark:hover:text-cyan-400">
+           <Activity size={18} />
+           <span className="hidden sm:inline">Model Accuracy</span>
+        </Link>
+
         <button
           onClick={toggleTheme}
           className="p-2 rounded-lg hover:bg-[#ffffff]/10 dark:hover:bg-white/10 text-[#fca311] dark:text-slate-300 transition-colors"

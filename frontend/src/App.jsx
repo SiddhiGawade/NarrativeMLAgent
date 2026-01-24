@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import StatsRow from './components/StatsRow';
 import NarrativeMap from './components/NarrativeMap';
 import NarrativeList from './components/NarrativeList';
+import ModelMetrics from './components/ModelMetrics';
 import { getClusterData, getVectorData, getStats } from './data/loader';
 
-function App() {
+function Dashboard() {
   const [clusters, setClusters] = useState([]);
   const [scatterData, setScatterData] = useState([]);
   const [stats, setStats] = useState({ totalArticles: 0, totalNarratives: 0 });
@@ -18,10 +20,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen text-[#000000] dark:text-white selection:bg-[#fca311]/30 dark:selection:bg-cyan-500/30">
-      <Header />
-      
-      <main className="max-w-7xl mx-auto p-6 space-y-8">
+    <div className="space-y-8">
         <StatsRow stats={stats} />
         
         {/* Main Content - Narrative Cards */}
@@ -37,8 +36,24 @@ function App() {
         <div className="w-full">
           <NarrativeMap data={scatterData} />
         </div>
-      </main>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen text-[#000000] dark:text-white selection:bg-[#fca311]/30 dark:selection:bg-cyan-500/30">
+        <Header />
+        
+        <main className="max-w-7xl mx-auto p-6">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/metrics" element={<ModelMetrics />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
