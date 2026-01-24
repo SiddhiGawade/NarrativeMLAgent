@@ -59,7 +59,60 @@ def run_pipeline():
         print(f"   > Source: {item['source']} | Date: {item['published_at']}")
         print("-" * 40)
         
-    # Optional: Save to JSON/DB (Step 3)
+    # 4. Vectorization Phase
+    print("\n[PHASE 3] Vectorization")
+    from backend.processing.vectorizer import NarrativeVectorizer
+    vectorizer = NarrativeVectorizer()
+    
+    # We load from the just-saved JSON to ensure consistency
+    data_for_vec = vectorizer.load_data(json_path)
+    if data_for_vec:
+        vectors = vectorizer.generate_embeddings(data_for_vec)
+        vec_path = os.path.join(os.path.dirname(__file__), 'silver_vectors.json')
+        vectorizer.save_vectors(data_for_vec, vectors, vec_path)
+    else:
+        print("[!] Vectorization skipped (no data).")
+        return
+
+    # 5. Clustering & Narrative Generation Phase
+    print("\n[PHASE 4] Clustering & Narrative Analysis")
+    from backend.processing.cluster_engine import ClusterEngine
+    
+    # Paths for clustering output
+    out_json = os.path.join(os.path.dirname(__file__), 'silver_clusters.json')
+    out_img = os.path.join(os.path.dirname(__file__), 'clusters.png')
+    scatter_json = os.path.join(os.path.dirname(__file__), 'silver_scatter.json')
+    
+    engine = ClusterEngine(json_path, vec_path)
+    embeddings, titles = engine.load_data()
+    
+    if embeddings is not None and len(embeddings) > 0:
+        df = engine.run_clustering(embeddings, titles)
+        engine.save_results(df, out_json, out_img, scatter_json)
+    else:
+        print("[!] Clustering skipped (no embeddings).")
+
+    # 6. Display Results (Top Narratives)
+    print("\n" + "="*60)
+    print(" NEW DETECTED NARRATIVES (WITH SENTIMENT)")
+    print("="*60)
+    
+    # Load the results we just saved
+    if os.path.exists(out_json):
+        with open(out_json, 'r', encoding='utf-8') as f:
+            clusters = json.load(f)
+            
+        for c in clusters:
+            if c['cluster_id'] == -1: continue # Skip noise in summary
+            sent_label = "NEUTRAL"
+            if c.get('sentiment'):
+                sent_label = c['sentiment']['label'].upper()
+                
+            print(f"[{sent_label}] {c['label']}")
+            print(f"   > Summary: {c['summary']}")
+            print("-" * 40)
+    
+    # End Loop
     
 if __name__ == "__main__":
     run_pipeline()

@@ -6,9 +6,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Try imports
+print("DEBUG: Importing UMAP/HDBSCAN...")
 try:
     import umap
     import hdbscan
+    print("DEBUG: UMAP/HDBSCAN Imported")
 except ImportError:
     print("[!] UMAP or HDBSCAN not installed.")
     sys.exit(1)
@@ -16,8 +18,9 @@ except ImportError:
 # Add project root to path ensuring module resolution works
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-# Import Namer
+print("DEBUG: Importing NarrativeNamer...")
 from backend.processing.narrative_namer import NarrativeNamer
+print("DEBUG: Namer Imported")
 
 class ClusterEngine:
     def __init__(self, data_file: str, vector_file: str):
@@ -99,6 +102,7 @@ class ClusterEngine:
                 'size': int(len(cluster_items)),
                 'label': name_data['title'],
                 'summary': name_data.get('summary', 'No summary available.'),
+                'sentiment': name_data.get('sentiment'),
                 'representative_titles': representative_titles
             }
             results.append(entry)

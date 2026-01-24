@@ -39,11 +39,15 @@ const NarrativeList = ({ clusters }) => {
             <div className="bg-white dark:bg-white/[0.02] p-5 pb-4" style={{ backgroundColor: theme === 'dark' ? undefined : '#ffffff' }}>
               <div className="flex justify-between items-start">
                 <div className="flex-1">
-                  <span className={`text-xs px-2 py-0.5 rounded font-bold tracking-wider inline-block mb-2 ${
-                    isNoise ? 'bg-[#e5e5e5] dark:bg-slate-800 text-[#14213d]/50 dark:text-slate-500' : 'bg-[#fca311]/10 dark:bg-gradient-to-r dark:from-purple-500/20 dark:to-cyan-500/20 text-[#fca311] dark:text-cyan-300 border border-[#fca311]/20 dark:border-cyan-500/20'
-                  }`}>
-                    {isNoise ? 'NOISE' : `NARRATIVE ${index + 1}`}
-                  </span>
+                  <div className="flex gap-2 mb-2">
+                      <span className={`text-xs px-2 py-0.5 rounded font-bold tracking-wider inline-block ${
+                        isNoise ? 'bg-[#e5e5e5] dark:bg-slate-800 text-[#14213d]/50 dark:text-slate-500' : 'bg-[#fca311]/10 dark:bg-gradient-to-r dark:from-purple-500/20 dark:to-cyan-500/20 text-[#fca311] dark:text-cyan-300 border border-[#fca311]/20 dark:border-cyan-500/20'
+                      }`}>
+                        {isNoise ? 'NOISE' : `NARRATIVE ${index + 1}`}
+                      </span>
+
+                      {/* Sentiment Badge (Removed from header) */}
+                  </div>
                   <h3 className="text-[#14213d] dark:text-white font-semibold leading-tight text-base" style={{ color: theme === 'dark' ? undefined : '#14213d' }}>
                     {cluster.label}
                   </h3>
@@ -81,7 +85,7 @@ const NarrativeList = ({ clusters }) => {
               )}
 
               {/* Title List */}
-              <div className="space-y-1.5">
+              <div className="space-y-1.5 mb-4">
                 {/* eslint-disable-next-line react/prop-types */}
                 {cluster.representative_titles.slice(0, isExpanded ? 5 : 2).map((title, i) => (
                   <p 
@@ -93,6 +97,22 @@ const NarrativeList = ({ clusters }) => {
                   </p>
                 ))}
               </div>
+
+              {/* Sentiment Button (New Location) */}
+              {!isNoise && cluster.sentiment && (
+                  <div className="mt-auto pt-2">
+                    <button className={`w-full py-2 px-4 rounded-xl font-bold text-sm shadow-lg transform transition-all active:scale-95 flex items-center justify-center gap-2 ${
+                        cluster.sentiment.label === 'Positive' 
+                        ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-emerald-900/20' 
+                        : cluster.sentiment.label === 'Negative'
+                            ? 'bg-gradient-to-r from-rose-500 to-rose-600 text-white shadow-rose-900/20'
+                            : 'bg-gradient-to-r from-slate-500 to-slate-600 text-white shadow-slate-900/20'
+                    }`}>
+                        {cluster.sentiment.label === 'Positive' ? 'BULLISH (Positive Sentiment)' : cluster.sentiment.label === 'Negative' ? 'BEARISH (Negative Sentiment)' : 'NEUTRAL (Neutral Sentiment)'}
+                        <span className="opacity-80 text-xs">({(cluster.sentiment.score * 100).toFixed(0)}%)</span>
+                    </button>
+                  </div>
+              )}
             </div>
           </div>
         );

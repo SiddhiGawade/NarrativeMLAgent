@@ -3,6 +3,8 @@ from typing import List, Dict
 import os
 import time
 
+from backend.processing.sentiment import NarrativeSentiment
+
 class NarrativeNamer:
     def __init__(self, api_key: str = None):
         # Use provided key or env var
@@ -12,6 +14,9 @@ class NarrativeNamer:
             self.model = genai.GenerativeModel('gemini-1.5-flash')
         except:
             self.model = genai.GenerativeModel('gemini-pro')
+            
+        # Initialize Sentiment Analyzer
+        self.sentiment_analyzer = NarrativeSentiment()
 
     def generate_name(self, titles: List[str]) -> Dict[str, str]:
         """
@@ -56,8 +61,15 @@ class NarrativeNamer:
                     
             # Fallback cleanup
             title = title.replace('"', '').replace('*', '')
+
+            # Sentiment Analysis
+            sentiment_result = self.sentiment_analyzer.analyze(summary)
             
-            return {'title': title, 'summary': summary}
+            return {
+                'title': title, 
+                'summary': summary,
+                'sentiment': sentiment_result
+            }
 
         except Exception as e:
             print(f"   [!] Gemini Error: {e}")

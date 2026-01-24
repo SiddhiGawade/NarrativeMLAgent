@@ -10,7 +10,11 @@
             "With Control Of Virginia, Democrats Go Into A Tax And Regulatory Frenzy",
             "Silver breaks past $100 for first time, a new record high",
             "Strength Seen in Avino Silver (ASM): Can Its 13.5% Jump Turn into More Strength?"
-        ]
+        ],
+        "sentiment": {
+            "label": "Neutral",
+            "score": 0.0
+        }
     },
     {
         "cluster_id": 0,
@@ -22,7 +26,11 @@
             "New Gig Economy Job: Train AI That Replaces You",
             "The Case Against Declaring Artificial General Intelligence",
             "Here Come Humanoid Robots: Industry Makes Clear Pivot Toward \"Dedicated-Purpose\" Commercial Deployments"
-        ]
+        ],
+        "sentiment": {
+            "label": "Negative",
+            "score": 0.966012716293335
+        }
     },
     {
         "cluster_id": 1,
@@ -33,7 +41,11 @@
             "Pacifica Silver Closes Upsized Brokered Offering; Shares up 2.1%",
             "This Silver Stock Is Up 281% and One Fund Just Took $5 Million Off the Table",
             "Assessing Endeavour Silver (TSX:EDR) Valuation After Strong One Year Return Despite Ongoing Net Loss"
-        ]
+        ],
+        "sentiment": {
+            "label": "Positive",
+            "score": 0.9991374015808105
+        }
     },
     {
         "cluster_id": 2,
@@ -46,7 +58,11 @@
             "Strong Production Lifts CDE's Top Line: Will the Momentum Sustain?",
             "Coeur Mining, Inc. (CDE): A Bull Case Theory",
             "CDE Rallies 236% in the Past Year: What Should Investors Do Now?"
-        ]
+        ],
+        "sentiment": {
+            "label": "Neutral",
+            "score": 0.9999983310699463
+        }
     },
     {
         "cluster_id": 3,
@@ -59,7 +75,11 @@
             "Hecla Mining vs. First Majestic: Which Silver Mining Stock has Greater Upside?",
             "Is It Too Late To Consider Hecla Mining (HL) After A 3x One-Year Surge?",
             "Does Hecla Mining\u2019s (HL) Leadership Shift Reframe Its Strategy Amid Record Silver Prices?"
-        ]
+        ],
+        "sentiment": {
+            "label": "Neutral",
+            "score": 0.9999854564666748
+        }
     },
     {
         "cluster_id": 4,
@@ -72,7 +92,11 @@
             "'Saving The Family' Should Start With Sound Money",
             "The EU-US $800BN Postwar Ukraine 'Prosperity' Plan Which Should Outrage MAGA",
             "In Humiliating Retreat, Starmer Forced To Pull Chagos Bill After Trump Backlash"
-        ]
+        ],
+        "sentiment": {
+            "label": "Neutral",
+            "score": 0.9995517134666443
+        }
     },
     {
         "cluster_id": 5,
@@ -85,7 +109,11 @@
             "The Next 10 Days Of Winter: The Worst In 40 Years Across The US",
             "Friday's big stock stories: What\u2019s likely to move the market in the next trading session",
             "The 'trap doors' to watch in the S&P 500 and Nasdaq as trade pressure mounts, according to the charts"
-        ]
+        ],
+        "sentiment": {
+            "label": "Neutral",
+            "score": 0.9999876022338867
+        }
     },
     {
         "cluster_id": 6,
@@ -98,7 +126,11 @@
             "Jim Cramer Considers Pan American Silver the \u201cBest Silver Mining Company\u201d",
             "Pan American Silver Reports Y/Y Increase in '25 Silver Production",
             "MOS Updates on Market and Issues Preliminary Q4 Sales Volumes"
-        ]
+        ],
+        "sentiment": {
+            "label": "Positive",
+            "score": 0.9997180104255676
+        }
     },
     {
         "cluster_id": 7,
@@ -111,7 +143,11 @@
             "10-Year, Silver, Crude Hit Inflection Points. What The Charts Say About 3 Macro Indicators.",
             "Silver Rally Isn't Over Yet: 3 Stocks Investors Should Buy",
             "Here\u2019s everything investors need to know about the historic silver rally in 10 charts"
-        ]
+        ],
+        "sentiment": {
+            "label": "Positive",
+            "score": 0.5673113465309143
+        }
     },
     {
         "cluster_id": 8,
@@ -124,7 +160,11 @@
             "ETFs to Watch as Silver's Upward Momentum Continues",
             "Flocking to precious metal ETFs? Keep an eye out for these tax surprises",
             "Where this top Fidelity bond manager is investing for 2026"
-        ]
+        ],
+        "sentiment": {
+            "label": "Neutral",
+            "score": 0.6432210206985474
+        }
     },
     {
         "cluster_id": 9,
@@ -137,7 +177,11 @@
             "Assessing Wheaton Precious Metals (TSX:WPM) Valuation After New Gold Stream Deal And Sustainability Recognition",
             "JPMorgan sees big gains for two stocks in a unique industry: water dredging",
             "Here's How Much a $1000 Investment in Wheaton Precious Metals Corp. Made 10 Years Ago Would Be Worth Today"
-        ]
+        ],
+        "sentiment": {
+            "label": "Positive",
+            "score": 1.0
+        }
     },
     {
         "cluster_id": 10,
@@ -150,7 +194,11 @@
             "TSX Stocks Estimated Below Fair Value In January 2026",
             "TSX Stocks Possibly Trading Below Estimated Value In January 2026",
             "TSX Insights First Majestic Silver And 2 Other Stocks That May Be Below Intrinsic Value Estimates"
-        ]
+        ],
+        "sentiment": {
+            "label": "Positive",
+            "score": 0.9999994039535522
+        }
     },
     {
         "cluster_id": 11,
@@ -163,7 +211,11 @@
             "Is First Majestic Silver's Higher Production a Catalyst for Future Growth?",
             "First Majestic's Q4 Silver-Equivalent Production Jumps 37% Y/Y",
             "First Majestic Trading at a Premium Value: Here's How to Play the Stock"
-        ]
+        ],
+        "sentiment": {
+            "label": "Positive",
+            "score": 0.9999998807907104
+        }
     },
     {
         "cluster_id": 12,
@@ -176,7 +228,11 @@
             "First Solar (FSLR) Stock Sinks As Market Gains: Here's Why",
             "Solar ETF Jumps In Buy Zone On Rush To Lock In Energy Projects, Tax Credits",
             "First Solar (FSLR) Valuation After Patent Office Backs TOPCon Solar Cell Protections"
-        ]
+        ],
+        "sentiment": {
+            "label": "Neutral",
+            "score": 0.900439977645874
+        }
     },
     {
         "cluster_id": 13,
@@ -189,6 +245,10 @@
             "How The New Price Target Is Shaping The Silvercorp Metals (TSX:SVM) Investment Story",
             "Silvercorp (SVM) Surges 8.2%: Is This an Indication of Further Gains?",
             "Silvercorp to acquire 70% stake in Kyrgyzstan gold projects"
-        ]
+        ],
+        "sentiment": {
+            "label": "Negative",
+            "score": 0.8205841779708862
+        }
     }
 ]

@@ -6,9 +6,8 @@ import numpy as np
 # Try importing sentence_transformers
 try:
     from sentence_transformers import SentenceTransformer
-except ImportError:
-    print("[!] 'sentence_transformers' library not found.")
-    print("    Please install it using: pip install sentence-transformers")
+except ImportError as e:
+    print(f"[!] 'sentence_transformers' import failed: {e}")
     sys.exit(1)
 
 class NarrativeVectorizer:
