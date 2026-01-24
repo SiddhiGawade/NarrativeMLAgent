@@ -2,7 +2,8 @@
     {
         "cluster_id": -1,
         "size": 21,
-        "label": "Noise coverage (Unrelated)",
+        "label": "Noise coverage",
+        "summary": "Various unrelated items covering market movements and general news.",
         "representative_titles": [
             "Bitcoin\u2019s weakness versus gold and equities puts quantum computing fears back in focus",
             "Vegas Casino To Accept Canadian Dollars At Par In Bid To Lure Northerners Back To Sin City",
@@ -14,7 +15,8 @@
     {
         "cluster_id": 0,
         "size": 4,
-        "label": "Against | Against Declaring | Ai",
+        "label": "AI-Induced Cultural Stagnation Is No Longer Speculation - It's Already Happening",
+        "summary": "Discussion on how AI is impacting culture and the workforce, including concerns about stagnation and replacement.",
         "representative_titles": [
             "AI-Induced Cultural Stagnation Is No Longer Speculation \u2212 It's Already Happening",
             "New Gig Economy Job: Train AI That Replaces You",
@@ -25,19 +27,19 @@
     {
         "cluster_id": 1,
         "size": 21,
-        "label": "Solar | First | First Solar",
+        "label": "Pacifica Silver Closes Upsized Brokered Offering; Shares up 2.1%",
+        "summary": "Pacifica Silver has closed its upsized brokered offering, leading to a rise in share price.",
         "representative_titles": [
-            "China Has Officially Overtaken Tesla In The Global EV Race",
-            "Did First Solar's (FSLR) Legal Win on TOPCon Patents Just Reshape Its Competitive Moat?",
-            "First Solar (FSLR) Stock Sinks As Market Gains: Here's Why",
-            "Solar ETF Jumps In Buy Zone On Rush To Lock In Energy Projects, Tax Credits",
-            "First Solar (FSLR) Valuation After Patent Office Backs TOPCon Solar Cell Protections"
+            "Pacifica Silver Closes Upsized Brokered Offering; Shares up 2.1%",
+            "This Silver Stock Is Up 281% and One Fund Just Took $5 Million Off the Table",
+            "Assessing Endeavour Silver (TSX:EDR) Valuation After Strong One Year Return Despite Ongoing Net Loss"
         ]
     },
     {
         "cluster_id": 2,
         "size": 6,
-        "label": "Cde | Coeur | Coeur Mining",
+        "label": "Here\u2019s What Raymond James Think About Coeur Mining (CDE)",
+        "summary": "A look at Raymond James' analysis of Coeur Mining (CDE) and the stock's recent performance.",
         "representative_titles": [
             "Here\u2019s What Raymond James Think About Coeur Mining (CDE)",
             "Coeur Mining (CDE) Soars 12.5%: Is Further Upside Left in the Stock?",
@@ -49,7 +51,8 @@
     {
         "cluster_id": 3,
         "size": 5,
-        "label": "Hecla | Mining | Hecla Mining",
+        "label": "Are Basic Materials Stocks Lagging Hecla Mining (HL) This Year?",
+        "summary": "Comparing Hecla Mining (HL) performance against other basic materials stocks and analyzing its valuation.",
         "representative_titles": [
             "Are Basic Materials Stocks Lagging Hecla Mining (HL) This Year?",
             "Hecla Mining (HL) Valuation Check After Strong Recent Share Price Momentum",
@@ -61,7 +64,8 @@
     {
         "cluster_id": 4,
         "size": 16,
-        "label": "Trump | Says | Davos",
+        "label": "Suicidal Empathy Is Another Front In The CCP's Hybrid War",
+        "summary": "Analysis of political dynamics including the CCP's hybrid war strategies and US domestic investigations.",
         "representative_titles": [
             "Suicidal Empathy Is Another Front In The CCP's Hybrid War",
             "Obama's Fingerprints All Over Investigations Of Trump And Clinton",
@@ -73,7 +77,8 @@
     {
         "cluster_id": 5,
         "size": 6,
-        "label": "As | Days | Next",
+        "label": "Review & Preview: Shiny Days",
+        "summary": "Market outlooks and reviews, focusing on stock market volatility and future trading sessions.",
         "representative_titles": [
             "Review & Preview: Shiny Days",
             "Stock market today: Dow, S&P 500 cap volatile week with back-to-back weekly losses",
@@ -85,7 +90,8 @@
     {
         "cluster_id": 6,
         "size": 13,
-        "label": "American | Pan | Pan American",
+        "label": "PAAS vs. SSRM: Which Mining Stock Is the Better Buy Now?",
+        "summary": "Comparison of mining stocks PAAS and SSRM to determine which offers better investment potential.",
         "representative_titles": [
             "PAAS vs. SSRM: Which Mining Stock Is the Better Buy Now?",
             "Pan American Silver price target lowered to $54 from $58 at Jefferies",
@@ -97,7 +103,8 @@
     {
         "cluster_id": 7,
         "size": 5,
-        "label": "About | Charts | About Historic",
+        "label": "Silver Outpaces Gold as Rally Looks 'Stretched' but Demand Holds",
+        "summary": "Silver is outpacing gold in the current rally, with analysis on whether the trend will continue despite looking stretched.",
         "representative_titles": [
             "Silver Outpaces Gold as Rally Looks 'Stretched' but Demand Holds, ProShares Says",
             "Silver Has Gone Ballistic. How to Play the Metal\u2019s Next Move.",
@@ -109,7 +116,8 @@
     {
         "cluster_id": 8,
         "size": 19,
-        "label": "Etf | Etfs | As",
+        "label": "Meet The Man Who Bought $1 Billion In Physical Silver",
+        "summary": "Reports on significant physical silver purchases and the ongoing rally in precious metal prices.",
         "representative_titles": [
             "Meet The Man Who Bought $1 Billion In Physical Silver Before The Rally",
             "Gold Races Toward $5,000 as Silver Hits a Record $100",
@@ -121,7 +129,8 @@
     {
         "cluster_id": 9,
         "size": 18,
-        "label": "After | Gold | Fortuna",
+        "label": "Gold Resource (GORO) Is Up 34.2% After Silver-Led Turnaround",
+        "summary": "Gold Resource (GORO) sees a significant stock price increase following a silver-led market turnaround.",
         "representative_titles": [
             "Gold Resource (GORO) Is Up 34.2% After Silver-Led Turnaround And Oaxaca Blockade - Has The Bull Case Changed?",
             "B2Gold (BTG) Rises Higher Than Market: Key Facts",
@@ -133,7 +142,8 @@
     {
         "cluster_id": 10,
         "size": 5,
-        "label": "Below | Tsx | Estimated",
+        "label": "5 Undervalued Safe-Haven Stocks with Strong Dividends",
+        "summary": "Analysis of undervalued safe-haven stocks that offer strong dividends in the current market.",
         "representative_titles": [
             "5 Undervalued Safe-Haven Stocks with Strong Dividends",
             "3 TSX Companies Estimated To Be Priced Below Their Intrinsic Values",
@@ -145,7 +155,8 @@
     {
         "cluster_id": 11,
         "size": 5,
-        "label": "First | First Majestic | Majestic",
+        "label": "Industry Analysts Just Made A Captivating Upgrade To First Majestic",
+        "summary": "Industry analysts have upgraded their revenue forecasts for First Majestic Silver Corp, signaling potential growth.",
         "representative_titles": [
             "Industry Analysts Just Made A Captivating Upgrade To Their First Majestic Silver Corp. (TSE:AG) Revenue Forecasts",
             "Raymond James upgrades this \u2018Magnificent Seven\u2019 titan as AI-driven growth accelerates",
@@ -157,17 +168,21 @@
     {
         "cluster_id": 12,
         "size": 3,
-        "label": "One | Up | After",
+        "label": "China Has Officially Overtaken Tesla In The Global EV Race",
+        "summary": "China has officially overtaken Tesla in the global EV race, marking a significant shift in the automotive industry landscape.",
         "representative_titles": [
-            "Pacifica Silver Closes Upsized Brokered Offering; Shares up 2.1%",
-            "This Silver Stock Is Up 281% and One Fund Just Took $5 Million Off the Table",
-            "Assessing Endeavour Silver (TSX:EDR) Valuation After Strong One Year Return Despite Ongoing Net Loss"
+            "China Has Officially Overtaken Tesla In The Global EV Race",
+            "Did First Solar's (FSLR) Legal Win on TOPCon Patents Just Reshape Its Competitive Moat?",
+            "First Solar (FSLR) Stock Sinks As Market Gains: Here's Why",
+            "Solar ETF Jumps In Buy Zone On Rush To Lock In Energy Projects, Tax Credits",
+            "First Solar (FSLR) Valuation After Patent Office Backs TOPCon Solar Cell Protections"
         ]
     },
     {
         "cluster_id": 13,
         "size": 8,
-        "label": "Silvercorp | Metals | Silvercorp Metals",
+        "label": "Has Silvercorp Metals (TSX:SVM) Run Too Far After Its 272% Surge?",
+        "summary": "Evaluating whether Silvercorp Metals' stock has overextended following a massive one-year surge.",
         "representative_titles": [
             "Has Silvercorp Metals (TSX:SVM) Run Too Far After Its 272% One-Year Surge?",
             "Silvercorp Metals Maintained at Outperform at BMO Following Kyrgyzstan Acquisition; Price Target Raised to C$19.50",

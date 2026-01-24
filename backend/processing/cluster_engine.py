@@ -63,18 +63,33 @@ class ClusterEngine:
         
         return df
 
-    def save_results(self, df, output_json, output_img):
-        # Save JSON
+    def save_results(self, df, output_json, output_img, scatter_json):
+        # 1. Save Scatter Data (Full list for Frontend)
+        # We convert the DataFrame to a list of dicts: [{x, y, cluster, title}, ...]
+        scatter_data = df.to_dict(orient='records')
+        # Ensure native types for JSON serialization (int64 -> int)
+        for item in scatter_data:
+            item['cluster'] = int(item['cluster'])
+            
+        with open(scatter_json, 'w', encoding='utf-8') as f:
+            json.dump(scatter_data, f, indent=4)
+        print(f"[ClusterEngine] Saved scatter data to {scatter_json}")
+
+        # 2. Save Aggregated Cluster Summary
         results = []
         for cluster_id in sorted(df['cluster'].unique()):
             cluster_items = df[df['cluster'] == cluster_id]
             titles = cluster_items['title'].tolist()
             
-            # Use Namer to generate label
+            # Use Namer to generate label (Returns Dict with Title/Summary)
             if cluster_id == -1:
-                label = "Noise coverage (Unrelated)"
+                name_data = {'title': "Noise coverage", 'summary': "Unrelated items"}
             else:
-                label = self.namer.generate_name(titles)
+                try:
+                    name_data = self.namer.generate_name(titles)
+                except Exception as e:
+                    print(f"   [!] Detailed naming failed: {e}")
+                    name_data = {'title': "Narrative Processing Error", 'summary': str(e)}
             
             # Simple summarization: Just take the first 5 titles
             representative_titles = titles[:5]
@@ -82,7 +97,8 @@ class ClusterEngine:
             entry = {
                 'cluster_id': int(cluster_id),
                 'size': int(len(cluster_items)),
-                'label': label,
+                'label': name_data['title'],
+                'summary': name_data.get('summary', 'No summary available.'),
                 'representative_titles': representative_titles
             }
             results.append(entry)
@@ -109,12 +125,13 @@ if __name__ == "__main__":
     
     OUT_JSON = os.path.join(BASE_DIR, 'silver_clusters.json')
     OUT_IMG = os.path.join(BASE_DIR, 'clusters.png')
+    SCATTER_JSON = os.path.join(BASE_DIR, 'silver_scatter.json')
     
     engine = ClusterEngine(DATA_FILE, VEC_FILE)
     embeddings, titles = engine.load_data()
     
     if embeddings is not None and len(embeddings) > 0:
         df = engine.run_clustering(embeddings, titles)
-        engine.save_results(df, OUT_JSON, OUT_IMG)
+        engine.save_results(df, OUT_JSON, OUT_IMG, SCATTER_JSON)
     else:
         print("[!] No embeddings found. Run vectorizer.py first.")
