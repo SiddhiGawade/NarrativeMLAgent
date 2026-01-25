@@ -62,76 +62,76 @@ const ModelMetrics = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Silhouette Score Card */}
-                <div className="p-6 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
+                <div className="p-6 rounded-xl bg-[#03045e] border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
                     <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-sm font-medium text-slate-500 dark:text-slate-400">Silhouette Score</h3>
+                        <h3 className="text-sm font-medium text-gray-300">Silhouette Score</h3>
                         <div className={`p-2 rounded-lg ${displayMetrics.silhouette_score > 0.5 ? 'bg-emerald-500/10 text-emerald-500' : 'bg-[#fca311]/10 text-[#fca311]'}`}>
                             <TrendingUp size={20} />
                         </div>
                     </div>
-                    <div className="text-3xl font-bold text-[#14213d] dark:text-white mb-1">
+                    <div className="text-3xl font-bold text-white mb-1">
                         {displayMetrics.silhouette_score.toFixed(3)}
                     </div>
-                    <p className="text-xs text-slate-400">Range: -1 to 1 (Higher is better)</p>
+                    <p className="text-xs text-gray-400">Range: -1 to 1 (Higher is better)</p>
                 </div>
 
                 {/* Davies-Bouldin Card */}
-                <div className="p-6 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
+                <div className="p-6 rounded-xl bg-[#03045e] border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
                     <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-sm font-medium text-slate-500 dark:text-slate-400">Davies-Bouldin Index</h3>
+                        <h3 className="text-sm font-medium text-gray-300">Davies-Bouldin Index</h3>
                         <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-500">
                             <Activity size={20} />
                         </div>
                     </div>
-                    <div className="text-3xl font-bold text-[#14213d] dark:text-white mb-1">
+                    <div className="text-3xl font-bold text-white mb-1">
                         {displayMetrics.davies_bouldin_score.toFixed(3)}
                     </div>
-                    <p className="text-xs text-slate-400">Lower is better (0 is perfect)</p>
+                    <p className="text-xs text-gray-400">Lower is better (0 is perfect)</p>
                 </div>
 
                 {/* Clusters Found */}
-                <div className="p-6 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
+                <div className="p-6 rounded-xl bg-[#03045e] border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
                     <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-sm font-medium text-slate-500 dark:text-slate-400">Total Clusters</h3>
+                        <h3 className="text-sm font-medium text-gray-300">Total Clusters</h3>
                         <div className="p-2 rounded-lg bg-violet-500/10 text-violet-500">
                             <CheckCircle size={20} />
                         </div>
                     </div>
-                    <div className="text-3xl font-bold text-[#14213d] dark:text-white mb-1">
+                    <div className="text-3xl font-bold text-white mb-1">
                         {displayMetrics.num_clusters}
                     </div>
-                    <p className="text-xs text-slate-400">Distinct narratives identified</p>
+                    <p className="text-xs text-gray-400">Distinct narratives identified</p>
                 </div>
 
                 {/* Noise Ratio */}
-                <div className="p-6 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
+                <div className="p-6 rounded-xl bg-[#03045e] border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
                     <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-sm font-medium text-slate-500 dark:text-slate-400">Noise Ratio</h3>
+                        <h3 className="text-sm font-medium text-gray-300">Noise Ratio</h3>
                         <div className="p-2 rounded-lg bg-rose-500/10 text-rose-500">
                             <AlertTriangle size={20} />
                         </div>
                     </div>
-                    <div className="text-3xl font-bold text-[#14213d] dark:text-white mb-1">
+                    <div className="text-3xl font-bold text-white mb-1">
                         {(displayMetrics.noise_ratio * 100).toFixed(1)}%
                     </div>
-                    <p className="text-xs text-slate-400">{displayMetrics.noise_points} outliers / {displayMetrics.total_points} total</p>
+                    <p className="text-xs text-gray-400">{displayMetrics.noise_points} outliers / {displayMetrics.total_points} total</p>
                 </div>
             </div>
 
             {/* Explanation Section */}
-            <div className="mt-8 p-6 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/5">
-                <h2 className="text-xl font-bold text-[#14213d] dark:text-white mb-4">Metric Explanations</h2>
+            <div className="mt-8 p-6 rounded-xl bg-[#03045e] border border-slate-200 dark:border-white/5">
+                <h2 className="text-xl font-bold text-white mb-4">Metric Explanations</h2>
                 <div className="grid md:grid-cols-2 gap-8">
                     <div>
                         <h3 className="text-lg font-semibold text-[#fca311] mb-2">Silhouette Score</h3>
-                        <p className="text-sm text-[#14213d] dark:text-slate-300 leading-relaxed">
+                        <p className="text-sm text-gray-300 leading-relaxed">
                             Measures how similar an object is to its own cluster (cohesion) compared to other clusters (separation). 
                             The silhouette ranges from −1 to +1, where a high value indicates that the object is well matched to its own cluster and poorly matched to neighboring clusters.
                         </p>
                     </div>
                     <div>
                         <h3 className="text-lg font-semibold text-cyan-500 mb-2">Davies-Bouldin Index</h3>
-                        <p className="text-sm text-[#14213d] dark:text-slate-300 leading-relaxed">
+                        <p className="text-sm text-gray-300 leading-relaxed">
                             Start signifies the average 'similarity' between clusters, where similarity is a measure that compares the distance between clusters with the size of the clusters themselves.
                             Zero is the lowest possible score. Values closer to zero indicate a better partition.
                         </p>

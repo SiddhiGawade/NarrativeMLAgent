@@ -50,7 +50,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex items-center justify-between p-6 border-b border-[#fca311]/20 dark:border-white/5 bg-white/60 dark:bg-[#050510]/60 backdrop-blur-xl sticky top-0 z-50 shadow-sm dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-colors duration-300">
+    <header className="flex items-center justify-between p-6 border-b border-[#fca311]/20 dark:border-white/5 bg-white/60 dark:bg-[#001d3d]/60 backdrop-blur-xl sticky top-0 z-50 shadow-sm dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-colors duration-300">
       <div className="flex items-center gap-3 group">
         <Link to="/">
           <img src={snaLogo} alt="SNA Logo" className="h-[50px] w-auto object-contain hover:scale-105 transition-transform duration-300" />

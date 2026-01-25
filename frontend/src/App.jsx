@@ -120,7 +120,7 @@ function Layout() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/metrics" element={<div className="max-w-7xl mx-auto p-6"><ModelMetrics /></div>} />
+          <Route path="/metrics" element={<div className="bg-[#bde0fe] min-h-screen"><ModelMetrics /></div>} />
           <Route path="/login" element={<AuthPage initialMode="login" />} />
           <Route path="/signup" element={<AuthPage initialMode="signup" />} />
         </Routes>

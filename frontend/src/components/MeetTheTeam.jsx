@@ -53,16 +53,15 @@ export default function MeetTheTeam() {
   const revealClass = "opacity-0 translate-y-10 transition-all duration-800 ease-out will-change-[transform,opacity] [&.active]:opacity-100 [&.active]:translate-y-0";
 
   return (
-    <section className="py-20 px-5 bg-white dark:bg-[#050510] relative z-10" id="team" ref={sectionRef}>
+    <section className="py-20 px-5 bg-white dark:bg-[#bde0fe] relative z-10" id="team" ref={sectionRef}>
       <div className="max-w-6xl mx-auto text-center">
 
-        <span className={`block text-xs tracking-[2px] text-[#fca311] font-semibold mb-4 reveal ${revealClass}`}>OUR PEOPLE</span>
 
-        <h2 className={`text-[42px] mb-4 text-[#14213d] dark:text-white font-bold reveal ${revealClass}`}>
+        <h2 className={`text-[42px] mb-4 text-[#03045e] dark:text-#03045e font-bold reveal ${revealClass}`}>
           Meet the Team
         </h2>
 
-        <p className={`max-w-2xl mx-auto mb-16 text-[#4b5563] dark:text-gray-300 text-base reveal ${revealClass} delay-150`}>
+        <p className={`max-w-2xl mx-auto mb-16 text-black text-base reveal ${revealClass} delay-150`}>
           A small, focused team combining AI, market research, and design to
           decode how narratives move commodity markets.
         </p>
