@@ -69,7 +69,7 @@ const NarrativeMap = ({ data }) => {
   };
 
   return (
-    <div className="h-[500px] w-full rounded-2xl border border-[#fca311]/10 dark:border-white/10 bg-[#14213d] dark:bg-slate-900/60 backdrop-blur-md p-6 relative overflow-hidden flex flex-col shadow-sm dark:shadow-inner">
+    <div className="h-[500px] w-150px rounded-2xl border border-[#fca311]/10 dark:border-white/5 bg-white dark:bg-[#1e293b] p-6 relative overflow-hidden flex flex-col shadow-sm dark:shadow-inner ml-12">
       <div className="mb-6">
         <h2 className="text-lg font-bold text-[#ffffff] dark:text-white flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[#fca311] dark:bg-cyan-400 shadow-[0_0_10px_#fca311] dark:shadow-[0_0_10px_var(--color-neon-blue)] animate-pulse"></span>

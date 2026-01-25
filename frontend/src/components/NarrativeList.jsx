@@ -64,7 +64,7 @@ const NarrativeList = ({ clusters }) => {
                     exit={{ opacity: 0, x: -50 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     onClick={() => !isNoise && setSelectedNarrative({ ...cluster, cardColor, globalIndex })}
-                    className={`rounded-2xl overflow-hidden border-2 border-[#e5e5e5] dark:border-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl dark:hover:shadow-[0_0_30px_-10px_rgba(191,0,255,0.3)] group flex flex-col shadow-lg h-full ${!isNoise ? 'cursor-pointer' : ''}`}
+                    className={`rounded-2xl overflow-hidden bg-white dark:bg-[#1e293b] border-2 border-[#e5e5e5] dark:border-white/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl dark:hover:shadow-[0_0_30px_-10px_rgba(191,0,255,0.3)] group flex flex-col shadow-lg min-h-[550px] ${!isNoise ? 'cursor-pointer' : ''}`}
                     style={{
                     boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
                     }}
@@ -111,7 +111,7 @@ const NarrativeList = ({ clusters }) => {
                         <div className="mb-3 p-3 bg-white/20 dark:bg-black/20 rounded-lg border-l-2 border-white/50 dark:border-purple-500">
                         <div className="flex gap-2 items-start text-xs text-white dark:text-purple-200">
                             <BookOpen size={14} className="mt-0.5 shrink-0" />
-                            <p className="leading-relaxed italic line-clamp-3" style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>
+                            <p className="leading-relaxed italic" style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>
                             "{cluster.summary || "No summary available."}"
                             </p>
                         </div>
@@ -119,19 +119,19 @@ const NarrativeList = ({ clusters }) => {
                     )}
 
                     {/* Title List */}
-                    <div className="space-y-1.5 mb-4">
+                    <div className="space-y-2 mb-4">
                         {/* eslint-disable-next-line react/prop-types */}
-                        {cluster.representative_titles.slice(0, 3).map((title, i) => (
+                        {cluster.representative_titles.slice(0, 5).map((title, i) => (
                         <p 
                             key={i} 
-                            className="text-xs text-white dark:text-white border-l-2 border-white/40 dark:border-white/40 pl-2 truncate"
+                            className="text-xs text-white dark:text-white border-l-2 border-white/40 dark:border-white/40 pl-2 leading-snug"
                             style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.2)' }}
                         >
                             {title}
                         </p>
                         ))}
-                         {cluster.representative_titles.length > 3 && (
-                             <p className="text-[10px] text-white/80 italic pl-2">+ {cluster.representative_titles.length - 3} more...</p>
+                         {cluster.representative_titles.length > 5 && (
+                             <p className="text-[10px] text-white/80 italic pl-2">+ {cluster.representative_titles.length - 5} more...</p>
                          )}
                     </div>
 
@@ -145,7 +145,7 @@ const NarrativeList = ({ clusters }) => {
                                     ? 'bg-gradient-to-r from-rose-500 to-rose-600 text-white shadow-rose-900/20'
                                     : 'bg-gradient-to-r from-slate-500 to-slate-600 text-white shadow-slate-900/20'
                             }`}>
-                                {cluster.sentiment.label === 'Positive' ? 'BULLISH' : cluster.sentiment.label === 'Negative' ? 'BEARISH' : 'NEUTRAL'}
+                                {cluster.sentiment.label === 'Positive' ? 'BULLISH (Positive Sentiment)' : cluster.sentiment.label === 'Negative' ? 'BEARISH (Negative Sentiment)' : 'NEUTRAL (Neutral Sentiment)'}
                                 <span className="opacity-80 text-xs">({(cluster.sentiment.score * 100).toFixed(0)}%)</span>
                             </div>
                         </div>

@@ -10,6 +10,9 @@ import { getClusterData, getVectorData, getStats } from './data/loader';
 
 import { Share2, ScanLine, BrainCircuit } from 'lucide-react';
 
+import MarketSidebar from './components/MarketSidebar';
+import SentimentChart from './components/SentimentChart';
+
 function Dashboard() {
   const [clusters, setClusters] = useState([]);
   const [scatterData, setScatterData] = useState([]);
@@ -68,18 +71,33 @@ function Dashboard() {
     <div className="max-w-7xl mx-auto p-6 space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
         <StatsRow stats={stats} />
         
-        {/* Main Content - Narrative Cards */}
-        <div>
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="font-bold text-lg text-[#fca311] dark:text-white">Detected Patterns</h2>
-            <span className="text-xs text-[#14213d]/60 dark:text-slate-400 font-mono animate-pulse">LIVE FEED</span>
-          </div>
-          <NarrativeList clusters={clusters} />
+        {/* Main Content Area */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <div className="lg:col-span-3">
+                <div className="flex items-center gap-4 mb-4">
+                    <h2 className="font-bold text-lg text-[#fca311] dark:text-white">Detected Patterns</h2>
+                    <span className="text-xs text-[#14213d]/60 dark:text-slate-400 font-mono animate-pulse">LIVE FEED</span>
+                </div>
+                <NarrativeList clusters={clusters} />
+            </div>
+
+            {/* Right Column - Market Sidebar (25% -> 1 col) */}
+            <div className="lg:col-span-1">
+                <div className="flex items-center gap-2 mb-4 h-7"> {/* h-7 enforces same height as left header text */}
+                    <h2 className="font-bold text-lg text-[#fca311] dark:text-white">Market Data</h2>
+                </div>
+                <MarketSidebar />
+            </div>
         </div>
 
-        {/* Impact Graph */}
-        <div className="w-full">
-          <NarrativeMap data={scatterData} />
+        {/* Visualizations Grid - Full Width */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="md:col-span-2">
+                <NarrativeMap data={scatterData} />
+            </div>
+            <div className="md:col-span-1">
+                <SentimentChart clusters={clusters} />
+            </div>
         </div>
     </div>
   );

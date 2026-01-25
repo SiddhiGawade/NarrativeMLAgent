@@ -13,7 +13,7 @@ const StatsRow = ({ stats }) => {
           <Layers size={20} />
         </div>
         <div>
-          <p className="text-[#ffffff]/60 dark:text-slate-400 text-xs uppercase">Total Intel</p>
+          <p className="text-[#ffffff]/60 dark:text-slate-400 text-xs uppercase">Processed Signals</p>
           <p className="text-2xl font-bold text-[#ffffff] dark:text-white">{totalArticles}</p>
         </div>
       </div>
