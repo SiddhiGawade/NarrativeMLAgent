@@ -17,14 +17,6 @@ const team = [
     image: "/sejal.jpeg",
     linkedin: "https://www.linkedin.com/in/sejal-dhanve-b01882310/",
     github: "https://github.com/sejaldhanve"
-  },
-  {
-    name: "Kedar Sawant",
-    role: "Data & Research",
-    desc: "Market research, narrative validation, and evaluation.",
-    image: "/kedar.jpeg",
-    linkedin: "https://www.linkedin.com/in/kedar-sawant-891968340/",
-    github: "https://github.com/sawantkedar0803-cloud"
   }
 ];
 
@@ -53,7 +45,7 @@ export default function MeetTheTeam() {
   const revealClass = "opacity-0 translate-y-10 transition-all duration-800 ease-out will-change-[transform,opacity] [&.active]:opacity-100 [&.active]:translate-y-0";
 
   return (
-    <section className="py-20 px-5 bg-white dark:bg-[#bde0fe] relative z-10" id="team" ref={sectionRef}>
+    <section className="py-20 px-25 bg-white dark:bg-[#bde0fe] relative z-10" id="team" ref={sectionRef}>
       <div className="max-w-6xl mx-auto text-center">
 
 
@@ -66,7 +58,7 @@ export default function MeetTheTeam() {
           decode how narratives move commodity markets.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {team.map((member, index) => (
             <div
               className={`bg-white dark:bg-[#111] rounded-3xl p-8 shadow-[0_20px_50px_rgba(0,0,0,0.08)] dark:shadow-none hover:-translate-y-2 hover:shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-all duration-300 reveal ${revealClass}`}
