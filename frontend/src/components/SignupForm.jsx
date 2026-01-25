@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { IoEyeOutline, IoEyeOffOutline } from 'react-icons/io5';
 import { FcGoogle } from 'react-icons/fc';
 import './signup.css';
@@ -8,6 +9,7 @@ import { setDoc, doc } from 'firebase/firestore';
 import { handleGoogleSignIn } from './authHandlers'; // Import the shared function
 
 const SignupForm = ({ onNavigate }) => {
+  const navigate = useNavigate();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -28,32 +30,65 @@ const SignupForm = ({ onNavigate }) => {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      await setDoc(doc(db, 'users', user.uid), {
+      const userData = {
         firstName,
         lastName,
         email,
         uid: user.uid,
-      });
+      };
 
-      if (onNavigate) onNavigate('dashboard');
+      try {
+        const timeoutPromise = new Promise((resolve) => setTimeout(() => resolve('timeout'), 5000));
+        const writePromise = setDoc(doc(db, 'users', user.uid), userData);
+        const raceResult = await Promise.race([writePromise, timeoutPromise]);
+
+        if (raceResult === 'timeout') {
+          console.warn("Firestore write timed out, skipping document creation to allow navigation.");
+        }
+      } catch (writeErr) {
+        console.error("Error writing user document (non-fatal):", writeErr);
+      }
+
+      navigate('/dashboard');
     } catch (err) {
       console.error('Error signing up:', err);
-      setError('Failed to create account. Email may already be in use.');
+      let errorMessage = 'Failed to create account.';
+      if (err.code === 'auth/email-already-in-use') {
+        errorMessage = 'This email is already registered. Please log in.';
+      } else if (err.code === 'auth/weak-password') {
+        errorMessage = 'Password should be at least 6 characters.';
+      } else if (err.code === 'auth/invalid-email') {
+        errorMessage = 'Please enter a valid email address.';
+      } else if (err.message) {
+        errorMessage = err.message;
+      }
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
   };
 
   const googleSignIn = async () => {
+    console.log("googleSignIn initiated");
     setError('');
     setLoading(true);
-    const success = await handleGoogleSignIn();
-    if (success && onNavigate) {
-      onNavigate('dashboard');
-    } else if (!success) {
-      setError('Google Sign-Up failed. Please try again.');
+    try {
+      const result = await handleGoogleSignIn();
+      console.log("handleGoogleSignIn returned:", result);
+      
+      if (result.success) {
+        console.log("Navigating to dashboard...");
+        navigate('/dashboard');
+      } else {
+        setError(result.error || 'Google Sign-Up failed. Please try again.');
+      }
+    } catch (e) {
+      console.error("Unexpected error in googleSignIn:", e);
+      setError('An unexpected error occurred: ' + e.message);
+    } finally {
+      console.log("Setting loading to false");
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   return (

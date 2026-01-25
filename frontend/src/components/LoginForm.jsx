@@ -1,9 +1,10 @@
+import React, { useState } from 'react';
 import { IoEyeOutline, IoEyeOffOutline } from 'react-icons/io5';
 import { FcGoogle } from 'react-icons/fc';
-import snaLogo from '../assets/SNA_Logo.png'; // Using existing logo as placeholder
+import './signup.css';
 import { auth } from '../firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth'; // This might fail if firebase not installed, but checking package.json it was installed.
-import { handleGoogleSignIn } from './authHandlers'; // Import the shared function
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { handleGoogleSignIn } from './authHandlers';
 
 const LoginForm = ({ onPasswordFocus, onPasswordBlur, onNavigate }) => {
   const [email, setEmail] = useState('');
@@ -25,7 +26,13 @@ const LoginForm = ({ onPasswordFocus, onPasswordBlur, onNavigate }) => {
       if (onNavigate) onNavigate('dashboard');
     } catch (err) {
       console.error("Error logging in:", err);
-      setError('Login failed. Please check your credentials.');
+      let errorMessage = 'Login failed. Please check your credentials.';
+      if (err.code === 'auth/user-not-found' || err.code === 'auth/wrong-password' || err.code === 'auth/invalid-credential') {
+        errorMessage = 'Invalid email or password.';
+      } else if (err.code === 'auth/too-many-requests') {
+        errorMessage = 'Too many failed attempts. Please try again later.';
+      }
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -34,37 +41,35 @@ const LoginForm = ({ onPasswordFocus, onPasswordBlur, onNavigate }) => {
   const googleSignIn = async () => {
     setError('');
     setLoading(true);
-    const success = await handleGoogleSignIn();
-    if (success && onNavigate) {
+    const result = await handleGoogleSignIn();
+    if (result.success && onNavigate) {
       onNavigate('dashboard');
-    } else if (!success) {
+    } else if (!result.success) {
       setError('Google Sign-In failed. Please try again.');
     }
     setLoading(false);
   };
 
   return (
-    <div className="login-form w-full">
+    <div className="signup-form w-full">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold tracking-tight text-white">Welcome back!</h2>
-        <p className="text-slate-300 mt-2">Please enter your details to sign in.</p>
+        <h2 className="text-3xl font-bold tracking-tight text-white">Welcome back</h2>
       </div>
 
       <form onSubmit={handleManualLogin}>
-        <div className="form-group">
+        <div className="signup-group">
           <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
+          <input 
+            type="email" 
+            id="email" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            required 
           />
         </div>
-
-        <div className="form-group">
+        <div className="signup-group">
           <label htmlFor="password">Password</label>
-          <div className="password-wrapper">
+          <div className="signup-password-wrapper">
             <input
               type={showPassword ? 'text' : 'password'}
               id="password"
@@ -74,19 +79,19 @@ const LoginForm = ({ onPasswordFocus, onPasswordBlur, onNavigate }) => {
               onBlur={onPasswordBlur}
               required
             />
-            <span className="password-toggle" onClick={() => setShowPassword(!showPassword)}>
+            <span className="signup-password-toggle" onClick={() => setShowPassword(!showPassword)}>
               {showPassword ? <IoEyeOffOutline /> : <IoEyeOutline />}
             </span>
           </div>
         </div>
+        
+        <div className="text-right mb-4">
+          <a href="#" className="text-[#A0A0A0] text-sm hover:text-white transition-colors">Forgot password?</a>
+        </div>
 
         {error && <div style={{ color: 'red', textAlign: 'center', marginBottom: '10px' }}>{error}</div>}
 
-        <div className="form-options">
-          <a href="#" className="forgot-password text-slate-300 hover:text-white">Forgot password?</a>
-        </div>
-
-        <button type="submit" className="btn btn-login" disabled={loading}>
+        <button type="submit" className="signup-btn" disabled={loading}>
           {loading ? 'Logging In...' : 'Log in'}
         </button>
         <button type="button" className="btn btn-google flex items-center justify-center gap-2 w-full" onClick={googleSignIn} disabled={loading}>
@@ -94,8 +99,8 @@ const LoginForm = ({ onPasswordFocus, onPasswordBlur, onNavigate }) => {
         </button>
       </form>
 
-      <div className="signup-link mt-4 text-center">
-        <p className="text-slate-300">Don't have an account? <a href="#" className="text-white font-medium hover:underline" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('signup'); }}>Sign up</a></p>
+      <div className="signup-link-mod">
+        <p>Don't have an account? <a href="#" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('signup'); }}>Sign up</a></p>
       </div>
     </div>
   );

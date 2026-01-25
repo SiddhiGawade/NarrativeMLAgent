@@ -180,7 +180,7 @@ const BlackCharacter = ({ isPasswordFocused, mouseX, mouseY }) => {
 
   return (
     <div className="character black">
-      <svg width="150" height="300" viewBox="0 0 150 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="150" height="300" viewBox="25 10 150 300" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="150" height="300" fill="#1E1E1E"/>
         {/* Left Eye */}
         <motion.circle ref={leftEyeRef} cx="70" cy="80" r="10" fill="white" animate={{ scale: isPasswordFocused ? 0.2 : 1 }} transition={springTransition} />
@@ -215,7 +215,7 @@ const YellowCharacter = ({ isPasswordFocused, mouseX, mouseY }) => {
 
   return (
     <div className="character yellow">
-      <svg width="100" height="250" viewBox="0 0 100 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="85" height="232" viewBox="0 0 100 250" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M100 250H0V125C0 55.9644 44.7715 0 100 0V250Z" fill="#FFD700"/>
         {/* Eye */}
         <motion.circle ref={eyeRef} cx="50" cy="70" r="10" fill="black" animate={{ scale: isPasswordFocused ? 0.2 : 1 }} transition={springTransition} />

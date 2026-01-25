@@ -25,7 +25,7 @@ const AuthPage = ({ initialMode = 'login' }) => {
   return (
     <div className="flex min-h-screen w-full">
       {/* Left Side - Animated Characters (Hidden on mobile) */}
-      <div className="hidden md:flex w-1/2 bg-[#E6E6FA] items-center justify-center relative overflow-hidden">
+      <div className="hidden md:flex w-1/2 bg-white items-center justify-center relative overflow-hidden">
         <div className="transform scale-125">
            <AnimatedCharacters isPasswordFocused={isPasswordFocused} />
         </div>
