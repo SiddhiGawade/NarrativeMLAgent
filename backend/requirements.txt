@@ -2,7 +2,6 @@
 fastapi==0.115.0
 uvicorn==0.37.0
 python-dotenv==1.1.1
-starlette==0.48.0
 
 # Data processing and ML
 pandas==2.2.3
