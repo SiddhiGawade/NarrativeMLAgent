@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import WhoWeAre from "../components/WhoWeAre";
 import MeetTheTeam from "../components/MeetTheTeam";
 import Footer from "../components/Footer";
@@ -6,9 +7,14 @@ import { MoveRight, Activity } from "lucide-react";
 
 export default function LandingPage() {
   const navigate = useNavigate();
+  const { currentUser } = useAuth();
 
   const onStartAnalysis = () => {
-    navigate("/dashboard");
+    if (currentUser) {
+      navigate("/dashboard");
+    } else {
+      navigate("/signup");
+    }
   };
 
   return (

@@ -5,6 +5,7 @@ import StatsRow from './components/StatsRow';
 import NarrativeMap from './components/NarrativeMap';
 import NarrativeList from './components/NarrativeList';
 import ModelMetrics from './components/ModelMetrics';
+import ProtectedRoute from './components/ProtectedRoute';
 import LandingPage from './pages/LandingPage'; // Import Landing Page
 import { getClusterData, getVectorData, getStats } from './data/loader';
 
@@ -119,8 +120,16 @@ function Layout() {
       <main className={isLanding ? "" : ""}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/metrics" element={<div className="bg-[#bde0fe] min-h-screen"><ModelMetrics /></div>} />
+          <Route path="/dashboard" element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          } />
+          <Route path="/metrics" element={
+            <ProtectedRoute>
+              <div className="bg-[#bde0fe] min-h-screen"><ModelMetrics /></div>
+            </ProtectedRoute>
+          } />
           <Route path="/login" element={<AuthPage initialMode="login" />} />
           <Route path="/signup" element={<AuthPage initialMode="signup" />} />
         </Routes>
