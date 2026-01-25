@@ -28,7 +28,7 @@ const ModelMetrics = () => {
         fetchMetrics();
     }, []);
 
-    if (loading) return <div className="p-8 text-center dark:text-white">Loading Model Performance...</div>;
+    if (loading) return <div className="p-8 text-center dark:text-[#03045e]">Loading Model Performance...</div>;
     
     // Fallback/Mock data if API fails or for demo purposes if backend isn't running in this env
     const displayMetrics = metrics || {
@@ -44,8 +44,8 @@ const ModelMetrics = () => {
         <div className="p-6 max-w-7xl mx-auto space-y-8 animate-fade-in">
             <div className="flex items-center justify-between">
                 <div>
-                    <h1 className="text-3xl font-bold text-[#14213d] dark:text-white mb-2">Model Performance</h1>
-                    <p className="text-[#14213d] dark:text-slate-400">Real-time evaluation of the narrative clustering engine.</p>
+                    <h1 className="text-3xl font-bold text-[#03045e] dark:text-#03045e mb-2">Model Performance</h1>
+                    <p className="text-[#14213d]">Real-time evaluation of the narrative clustering engine.</p>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-600 dark:text-emerald-400 text-sm font-medium">
                     <Activity size={16} />
@@ -62,7 +62,7 @@ const ModelMetrics = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Silhouette Score Card */}
-                <div className="p-6 rounded-xl bg-[#03045e] border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
+                <div className="p-6 rounded-xl bg-[#020d3d] border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
                     <div className="flex items-center justify-between mb-4">
                         <h3 className="text-sm font-medium text-gray-300">Silhouette Score</h3>
                         <div className={`p-2 rounded-lg ${displayMetrics.silhouette_score > 0.5 ? 'bg-emerald-500/10 text-emerald-500' : 'bg-[#fca311]/10 text-[#fca311]'}`}>
@@ -76,7 +76,7 @@ const ModelMetrics = () => {
                 </div>
 
                 {/* Davies-Bouldin Card */}
-                <div className="p-6 rounded-xl bg-[#03045e] border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
+                <div className="p-6 rounded-xl bg-[#020d3d] border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
                     <div className="flex items-center justify-between mb-4">
                         <h3 className="text-sm font-medium text-gray-300">Davies-Bouldin Index</h3>
                         <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-500">
@@ -90,7 +90,7 @@ const ModelMetrics = () => {
                 </div>
 
                 {/* Clusters Found */}
-                <div className="p-6 rounded-xl bg-[#03045e] border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
+                <div className="p-6 rounded-xl bg-[#020d3d] border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
                     <div className="flex items-center justify-between mb-4">
                         <h3 className="text-sm font-medium text-gray-300">Total Clusters</h3>
                         <div className="p-2 rounded-lg bg-violet-500/10 text-violet-500">
@@ -104,7 +104,7 @@ const ModelMetrics = () => {
                 </div>
 
                 {/* Noise Ratio */}
-                <div className="p-6 rounded-xl bg-[#03045e] border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
+                <div className="p-6 rounded-xl bg-[#020d3d] border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all">
                     <div className="flex items-center justify-between mb-4">
                         <h3 className="text-sm font-medium text-gray-300">Noise Ratio</h3>
                         <div className="p-2 rounded-lg bg-rose-500/10 text-rose-500">
@@ -119,7 +119,7 @@ const ModelMetrics = () => {
             </div>
 
             {/* Explanation Section */}
-            <div className="mt-8 p-6 rounded-xl bg-[#03045e] border border-slate-200 dark:border-white/5">
+            <div className="mt-8 p-6 rounded-xl bg-[#0a1128] border border-slate-200 dark:border-white/5">
                 <h2 className="text-xl font-bold text-white mb-4">Metric Explanations</h2>
                 <div className="grid md:grid-cols-2 gap-8">
                     <div>
