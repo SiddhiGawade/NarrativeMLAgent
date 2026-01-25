@@ -2,13 +2,19 @@ import google.generativeai as genai
 from typing import List, Dict
 import os
 import time
+from dotenv import load_dotenv
 
 from backend.processing.sentiment import NarrativeSentiment
 
+# Load environment variables
+load_dotenv()
+
 class NarrativeNamer:
     def __init__(self, api_key: str = None):
-        # Use provided key or env var
-        self.api_key = api_key or "AIzaSyCHoP2pFhdjt3qmsoC4zHfTdcIVJPkSMlc"
+        """Initialize with Gemini API key from environment or parameter"""
+        self.api_key = api_key or os.getenv("GOOGLE_API_KEY")
+        if not self.api_key:
+            raise ValueError("GOOGLE_API_KEY not found in environment variables or parameters")
         genai.configure(api_key=self.api_key)
         try:
             self.model = genai.GenerativeModel('gemini-1.5-flash')

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { TrendingUp, Activity, AlertTriangle, CheckCircle } from 'lucide-react';
+import { API_BASE_URL } from '../config/api';
 
 const ModelMetrics = () => {
     const [metrics, setMetrics] = useState(null);
@@ -10,7 +11,7 @@ const ModelMetrics = () => {
         const fetchMetrics = async () => {
             try {
                 // Try fetching from local API
-                const response = await fetch('http://localhost:8000/api/metrics');
+                const response = await fetch(`${API_BASE_URL}/api/metrics`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch metrics from backend');
                 }

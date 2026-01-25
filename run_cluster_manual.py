@@ -4,6 +4,10 @@ import sys
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Imports that work in test_full.py
 import umap
@@ -23,8 +27,12 @@ SCATTER_JSON = os.path.join(BACKEND_DIR, 'silver_scatter.json')
 print("Loading Sentiment Model...")
 sentiment_pipeline = pipeline("sentiment-analysis", model="yiyanghkust/finbert-tone")
 
-# Init GenAI
-genai.configure(api_key="AIzaSyCHoP2pFhdjt3qmsoC4zHfTdcIVJPkSMlc")
+# Init GenAI - Load from environment
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+if not GOOGLE_API_KEY:
+    raise ValueError("GOOGLE_API_KEY not found in environment variables")
+
+genai.configure(api_key=GOOGLE_API_KEY)
 try:
     genai_model = genai.GenerativeModel('gemini-1.5-flash')
 except:

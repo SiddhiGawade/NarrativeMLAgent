@@ -69,11 +69,17 @@ class TwitterScraper:
             return []
 
 if __name__ == "__main__":
-    # PASTE YOUR BEARER TOKEN HERE
-    BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAGHN7AEAAAAAXp6jhYBtmG5WCILJYg2R9VokoNo%3Dmu6w9SCDNFVMmlWYQ0vzJX3alYAGtMOiT8MZmAyG6NDztYmfzr"
+    import os
+    from dotenv import load_dotenv
     
-    if BEARER_TOKEN == "YOUR_BEARER_TOKEN_HERE":
-        print("Please paste your Bearer Token in the script.")
+    # Load environment variables
+    load_dotenv()
+    
+    BEARER_TOKEN = os.getenv("TWITTER_BEARER_TOKEN")
+    
+    if not BEARER_TOKEN:
+        print("Error: TWITTER_BEARER_TOKEN not found in environment variables")
+        print("Please set TWITTER_BEARER_TOKEN in your .env file")
     else:
         scraper = TwitterScraper(BEARER_TOKEN)
         scraper.fetch_tweets()

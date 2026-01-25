@@ -1,0 +1,35 @@
+# Core FastAPI dependencies
+fastapi==0.115.0
+uvicorn==0.37.0
+python-dotenv==1.1.1
+starlette==0.48.0
+
+# Data processing and ML
+pandas==2.2.3
+numpy==1.26.4
+scikit-learn==1.6.1
+scipy==1.15.3
+
+# Sentence transformers for NLP
+sentence-transformers==5.2.0
+torch==2.7.1
+transformers==4.53.0
+
+# Clustering and visualization
+umap-learn==0.5.11
+seaborn==0.13.2
+
+# Web scraping and data collection
+beautifulsoup4==4.12.3
+requests==2.32.3
+yfinance==1.0
+
+# Google AI
+google-generativeai==0.8.6
+
+# Database (if needed)
+pymongo==4.15.3
+
+# Utilities
+python-dateutil==2.9.0
+tqdm==4.67.1

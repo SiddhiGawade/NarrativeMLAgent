@@ -1,9 +1,14 @@
 from typing import List, Dict
 import asyncio
+import os
+from dotenv import load_dotenv
 from backend.data_collectors.news_scraper import NewsScraper
 from backend.data_collectors.rss_scraper import RSSScraper
 from backend.data_collectors.metal_scraper import MetalPriceScraper
 from backend.data_collectors.twitter_scraper import TwitterScraper
+
+# Load environment variables
+load_dotenv()
 
 class DataFusion:
     def __init__(self, target_tickers: List[str] = None):
@@ -17,10 +22,17 @@ class DataFusion:
         ]
         self.news_scraper = NewsScraper(self.tickers)
         self.rss_scraper = RSSScraper() 
-        # API Key provided by user
-        self.metal_scraper = MetalPriceScraper(api_key="23e2ec99f2041769e7bae47551d049d0")
-        # Twitter Bearer Token (Normally env var, hardcoded for prototype)
-        self.twitter_scraper = TwitterScraper(bearer_token="AAAAAAAAAAAAAAAAAAAAAGHN7AEAAAAAXp6jhYBtmG5WCILJYg2R9VokoNo%3Dmu6w9SCDNFVMmlWYQ0vzJX3alYAGtMOiT8MZmAyG6NDztYmfzr")
+        
+        # Load API keys from environment
+        metal_api_key = os.getenv("METAL_PRICE_API_KEY")
+        if not metal_api_key:
+            raise ValueError("METAL_PRICE_API_KEY not found in environment variables")
+        self.metal_scraper = MetalPriceScraper(api_key=metal_api_key)
+        
+        twitter_token = os.getenv("TWITTER_BEARER_TOKEN")
+        if not twitter_token:
+            raise ValueError("TWITTER_BEARER_TOKEN not found in environment variables")
+        self.twitter_scraper = TwitterScraper(bearer_token=twitter_token)
 
     def collect_all_data(self) -> List[Dict]:
         """

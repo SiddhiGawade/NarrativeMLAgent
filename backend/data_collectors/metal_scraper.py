@@ -66,7 +66,16 @@ class MetalPriceScraper:
             return []
 
 if __name__ == "__main__":
-    # Test
-    key = "23e2ec99f2041769e7bae47551d049d0"
-    scraper = MetalPriceScraper(key)
-    scraper.fetch_prices()
+    import os
+    from dotenv import load_dotenv
+    
+    # Load environment variables
+    load_dotenv()
+    
+    key = os.getenv("METAL_PRICE_API_KEY")
+    if not key:
+        print("Error: METAL_PRICE_API_KEY not found in environment variables")
+        print("Please set METAL_PRICE_API_KEY in your .env file")
+    else:
+        scraper = MetalPriceScraper(key)
+        scraper.fetch_prices()

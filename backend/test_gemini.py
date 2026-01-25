@@ -1,7 +1,13 @@
 import google.generativeai as genai
 import os
+from dotenv import load_dotenv
 
-API_KEY = "AIzaSyCHoP2pFhdjt3qmsoC4zHfTdcIVJPkSMlc"
+# Load environment variables
+load_dotenv()
+
+API_KEY = os.getenv("GOOGLE_API_KEY")
+if not API_KEY:
+    raise ValueError("GOOGLE_API_KEY not found in environment variables")
 
 def test_gemini():
     print(f"[*] Configuring Gemini with Key ending in ...{API_KEY[-4:]}")
